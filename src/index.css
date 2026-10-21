@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body{
+    font-family:"IRANSans",sans-serif;
+}
+
+
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+
+
+* {
+  margin:0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+ background: var(--text);
+
+
+ color: var(--text);
+}
+
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("./assets/fonts/IRANSans/WebFonts/fonts/woff2/IRANSansWeb.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("./assets/fonts/IRANSans/WebFonts/fonts/woff/IRANSansWeb_Medium.woff") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("./assets/fonts/IRANSans/WebFonts/fonts/woff/IRANSansWeb_Bold.woff") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "IRANSans";
+   src: url("./assets/fonts/IRANSans/WebFonts/fonts/woff/IRANSansWeb_Black.woff") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}

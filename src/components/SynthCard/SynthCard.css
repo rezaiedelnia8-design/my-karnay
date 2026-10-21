@@ -1,0 +1,1041 @@
+
+.synth-card {
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 500px;
+    max-width: 456px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    background-color: #f5f1f8;
+
+    border: 1px solid rgba(106, 59, 151, .15);
+
+    box-shadow:
+        0 4px 6px rgba(106, 59, 151, .05),
+        0 20px 50px rgba(106, 59, 151, .18),
+        inset 0 1px rgba(255, 255, 255, .85);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    margin-inline: auto;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+.synth-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 34px;
+
+    position: relative;
+
+    z-index: 2;
+
+    flex-direction: row-reverse;
+}
+
+
+/* عنوان */
+
+.synth-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgb(106, 59, 151);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    font-family: "IRANSans", sans-serif;
+
+    direction: rtl;
+
+    transition: opacity .3s ease;
+}
+
+
+/* وقتی صدا پخش می‌شود */
+
+
+
+
+.title-icon {
+
+    width: 18px;
+
+    height: 18px;
+
+    transition: opacity .3s ease;
+}
+
+.title-icon.is-playing {
+    opacity: 0.35;
+     animation: synthSpeakerBlink 2.8s ease-in-out infinite;
+}
+
+
+/* ==========================
+   Badge
+========================== */
+
+.synth-badge {
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    background: #6A3B97;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    border: 1px solid rgba(106, 59, 151, .25);
+
+    font-family: "IRANSans", sans-serif;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+
+/* هنگام پخش */
+
+.synth-badge.playing-badge {
+
+    background: rgba(106, 59, 151, .10);
+
+    color: #6A3B97;
+
+    border-color: rgba(106, 59, 151, .18);
+     animation: synthSpeakerBlink 2.8s ease-in-out infinite;
+
+}
+
+
+/* ==========================
+   Center
+========================== */
+
+.synth-center {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 0;
+
+}
+
+
+/* ==========================
+   Play Wrapper
+========================== */
+
+.play-wrapper {
+
+    position: relative;
+
+    width: 190px;
+
+    min-height: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    align-items: center;
+}
+
+
+/* ==========================
+   Outer Circle
+========================== */
+
+.play-circle {
+
+    width: 160px;
+
+    height: 160px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, .95);
+
+    background: rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.25);
+
+    transition:
+        background-color .5s ease,
+        box-shadow .5s ease;
+}
+
+
+/* وقتی پخش است */
+
+.play-circle.is-playing {
+
+    background: rgba(255,255,255,.18);
+
+
+
+         transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 3px rgba(106, 59, 151, 0.15),
+        0 10px 30px rgba(106, 59, 151, 0.20);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* ==========================
+   Play Button
+========================== */
+
+.play-button {
+
+    width: 150px;
+
+    height: 150px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.95);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,.95),
+            rgba(233,222,239,.65) 55%,
+            rgba(224,208,235,.45)
+        );
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.95),
+        0 8px 32px rgba(106,59,151,.12),
+        inset 0 2px 8px rgba(255,255,255,.8);
+
+    transition:
+        transform .7s ease,
+        background .5s ease,
+        box-shadow .5s ease;
+}
+
+
+
+
+
+
+
+/* هنگام پخش */
+
+.play-button.is-playing {
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #9e6fbc,
+            #6a3b97 65%,
+            #5a3183
+        );
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,.95),
+        0 12px 36px rgba(106,59,151,.28),
+        inset 0 2px 8px rgba(255,255,255,.22);
+}
+
+
+/* ==========================
+   Icon
+========================== */
+
+.play-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    color: #6A3B97;
+
+    transition:
+    transform .5s ease;
+}
+
+
+
+
+.synth-card:hover .play-button:not(.is-playing) .play-icon{
+    transform: scale(1.1);
+}
+
+
+
+
+/* آیکون هنگام پخش */
+
+.play-button.is-playing .play-icon {
+
+    color: rgb(0, 0, 0);
+
+}
+
+
+/* آیکون Stop کمی کوچک‌تر */
+
+.stop-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+}
+
+
+/* ==========================
+   Play Text
+========================== */
+
+.play-text {
+
+    margin-top: 20px;
+
+    min-height: 40px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 5px;
+}
+
+
+.play-text p {
+
+    margin: 0;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #6b7280;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    letter-spacing: .02em;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================
+   Equalizer
+========================== */
+
+.equalizer {
+
+    width: 100%;
+
+    height: 60px;
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    padding: 0 24px;
+}
+
+
+.eq-bar {
+
+    width: 5px;
+
+    min-height: 8px;
+
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+
+    background: rgba(0,0,0,.12);
+
+    transition:
+        height .08s linear,
+        background-color .2s ease;
+}
+
+
+/* وقتی در حال پخش است */
+
+.eq-bar.is-playing {
+
+    background: #9E6FBC;
+
+}
+
+
+/* ==========================
+   Info Box
+========================== */
+
+.synth-info {
+
+    width: 200%;
+
+    max-width: 390px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(184,149,206,.12);
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+    margin-bottom: 0;
+
+    padding: 10px 14px;
+
+    background: #e1dfe2;
+
+    border-radius: 16px;
+
+    direction: rtl;
+
+    text-align: right;
+}
+
+
+.info-icon {
+
+    width: 16px;
+
+    height: 16px;
+
+    color: #B895CE;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+}
+
+
+.synth-info span {
+
+    display: block;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    line-height: 1.9;
+
+    color: #575757;
+
+    direction: rtl;
+}
+
+
+
+/* =========================================================
+   SYNTH RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   DESKTOP
+   993px+
+   ========================================================= */
+
+@media (min-width: 993px) {
+
+    .synth-card {
+        width: 100%;
+        max-width: 456px;
+        margin-left: auto;
+        margin-right: 0;
+        transform: translateY(10px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 992px
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .synth-card {
+        width: min(100%, 456px);
+        max-width: 456px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .synth-card {
+        width: min(100%, 430px);
+        max-width: 430px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 480px
+   ========================================================= */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .synth-card {
+        width: calc(100% - 28px);
+        max-width: 400px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 22px;
+
+        border-radius: 24px;
+    }
+
+    .synth-header {
+        margin-bottom: 26px;
+    }
+
+    .play-wrapper {
+        width: 180px;
+    }
+
+    .play-circle {
+        width: 145px;
+        height: 145px;
+    }
+
+    .play-button {
+        width: 135px;
+        height: 135px;
+    }
+
+    .play-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .equalizer {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .synth-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+   زیر 320px
+   ========================================================= */
+
+@media (max-width: 319px) {
+
+    .synth-card {
+        width: calc(100% - 20px);
+        max-width: 300px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 18px;
+
+        border-radius: 20px;
+    }
+
+    .synth-header {
+        margin-bottom: 22px;
+    }
+
+    .synth-title {
+        font-size: 10px;
+    }
+
+    .synth-badge {
+        padding: 5px 9px;
+        font-size: 8px;
+    }
+
+    .play-wrapper {
+        width: 160px;
+        min-height: 350px;
+    }
+
+    .play-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .play-button {
+        width: 120px;
+        height: 120px;
+    }
+
+    .play-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .play-text p {
+        font-size: 10px;
+        white-space: normal;
+        line-height: 1.8;
+    }
+
+    .equalizer {
+        width: 100%;
+        padding: 0;
+        gap: 3px;
+    }
+
+    .eq-bar {
+        width: 4px;
+    }
+
+    .synth-info {
+        width: 100%;
+        max-width: 100%;
+
+        gap: 8px;
+
+        padding: 8px 10px;
+    }
+
+    .synth-info span {
+        font-size: 9px;
+        line-height: 1.8;
+    }
+
+}
+
+/* =========================================================
+   SYNTH CARD — DARK MODE
+   ========================================================= */
+
+body.dark-mode .synth-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(26, 16, 40, 0.85),
+            rgba(15, 8, 24, 0.93)
+        );
+
+    border-color:
+        rgba(158, 111, 188, 0.25);
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.20),
+        0 20px 50px rgba(158, 111, 188, 0.15),
+        inset 0 1px rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    transition:
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   SYNTH CARD — DARK CONTENT
+   ========================================================= */
+
+body.dark-mode .synth-card .synth-title {
+    color: #d5bee4;
+}
+
+body.dark-mode .synth-card .title-icon {
+    color: #d5bee4;
+}
+
+
+/* =========================================================
+   PLAYING SPEAKER — BLINK
+   ========================================================= */
+
+body.dark-mode .synth-card .title-icon.is-playing {
+    animation: synthSpeakerBlink 2.8s ease-in-out infinite;
+}
+
+@keyframes synthSpeakerBlink {
+
+    0%,
+    100% {
+        color: #d5bee4;
+        opacity: 0.45;
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    50% {
+        color: #b895ce;
+        opacity: 1;
+        filter:
+            drop-shadow(
+                0 0 7px rgba(184, 149, 206, 0.55)
+            );
+    }
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+body.dark-mode .synth-card .synth-badge {
+
+    background: #100a16;
+    color: #928e8e;
+
+    border-color:
+        rgba(158, 111, 188, 0.30);
+}
+
+body.dark-mode .synth-card .synth-badge.playing-badge {
+
+    background:
+        rgba(158, 111, 188, 0.12);
+
+    color: #b895ce;
+
+    border-color:
+        rgba(158, 111, 188, 0.30);
+
+    animation: synthBadgeBlink 2.8s ease-in-out infinite;
+}
+
+
+/* چشمک زدن خود کادر «در حال پخش» */
+
+@keyframes synthBadgeBlink {
+
+    0%,
+    100% {
+        opacity: 0.45;
+
+        box-shadow:
+            0 0 0 rgba(158, 111, 188, 0);
+    }
+
+    50% {
+        opacity: 1;
+
+        box-shadow:
+            0 0 10px rgba(158, 111, 188, 0.22),
+            inset 0 0 8px rgba(158, 111, 188, 0.08);
+    }
+}
+
+
+/* =========================================================
+   PLAY CIRCLE
+   حذف کامل خطوط مشکی دور دایره
+   ========================================================= */
+
+body.dark-mode .synth-card .play-circle {
+
+    border: none;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow: none;
+}
+
+
+/* وقتی صدا در حال پخش است */
+
+body.dark-mode .synth-card .play-circle.is-playing {
+
+    border: none;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    box-shadow:
+        0 0 20px rgba(184, 149, 206, 0.12);
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+   ========================================================= */
+
+body.dark-mode .synth-card .play-button {
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #e9deef,
+            #c9afd8 55%,
+            #9e6fbc
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.70);
+
+    box-shadow:
+        0 8px 32px rgba(106, 59, 151, 0.25),
+        inset 0 2px 8px rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   PLAY ICON — بنفش روشن
+   ========================================================= */
+
+body.dark-mode .synth-card .play-icon {
+
+    color: #9e6fbc;
+}
+
+
+/* وقتی صدا در حال پخش است */
+
+body.dark-mode .synth-card .play-button.is-playing {
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #b895ce,
+            #8f6cbc 60%,
+            #6a3b97
+        );
+
+
+
+    box-shadow:
+        0 0 18px rgba(158, 111, 188, 0.28),
+        0 12px 36px rgba(106, 59, 151, 0.30),
+        inset 0 2px 8px rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .synth-card .play-button.is-playing .play-icon {
+
+    color: #e9deef;
+}
+
+
+/* =========================================================
+   PLAY TEXT
+   ========================================================= */
+
+body.dark-mode .synth-card .play-text p {
+    color: #8f8295;
+}
+
+
+/* =========================================================
+   EQUALIZER
+   ========================================================= */
+
+body.dark-mode .synth-card .eq-bar {
+
+    background:
+        rgba(218, 209, 209, 0.12);
+}
+
+body.dark-mode .synth-card .eq-bar.is-playing {
+
+    background: #9e7bb4;
+
+    box-shadow:
+        0 0 8px rgba(158, 111, 188, 0.45);
+}
+
+
+/* =========================================================
+   INFO
+   ========================================================= */
+
+body.dark-mode .synth-card .synth-info {
+
+    background:
+        rgba(15, 8, 24, 0.93);
+
+    border-color:
+        rgba(15, 8, 24, 0.93);
+}
+
+body.dark-mode .synth-card .info-icon {
+    color: #9a83a8;
+}
+
+body.dark-mode .synth-card .synth-info span {
+    color: #cfc3d5;
+}
+
+
+/* =========================================================
+   SUBTLE WHITE LIGHT
+   گوشه بالا راست + پایین چپ
+   ========================================================= */
+
+body.dark-mode .synth-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -110px;
+    right: -110px;
+
+    width: 260px;
+    height: 260px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.055) 0%,
+            rgba(255, 255, 255, 0.025) 30%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+body.dark-mode .synth-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -120px;
+    left: -120px;
+
+    width: 280px;
+    height: 280px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.045) 0%,
+            rgba(255, 255, 255, 0.018) 30%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+body.dark-mode .synth-card .play-button.is-playing .stop-icon {
+    color: #000000;
+}

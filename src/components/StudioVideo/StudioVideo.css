@@ -1,0 +1,1486 @@
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.studio-trailer-header {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+/* =========================================================
+   MAIN STUDIO TRAILER
+========================================================= */
+
+.studio-trailer {
+    position: relative;
+
+    width: 100%;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    padding: 70px 16px;
+
+    transition:
+        background-color .5s ease,
+        box-shadow .5s ease;
+}
+
+/* =========================================================
+   VIDEO EYEBROW
+   آیکون فیلم + متن «تیزر رسمی استودیو»
+========================================================= */
+
+.studio-trailer-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: row-reverse;
+
+    gap: 8px;
+
+    color: #c19ed6;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: .1em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    margin-bottom: 9px;
+}
+
+.studio-trailer-eyebrow-icon {
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+
+    color: #9e6fbc;
+
+
+    stroke-width: 2;
+
+    animation: studioEyebrowPulse 2s
+        cubic-bezier(.4, 0, .6, 1)
+        infinite;
+}
+
+
+/* نور و ضربان خیلی ملایم آیکون */
+
+@keyframes studioEyebrowPulse {
+
+    0%,
+    100% {
+        opacity: .65;
+
+        filter:
+            drop-shadow(
+                0 0 4px
+                rgba(158, 111, 188, .35)
+            );
+
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+
+        filter:
+            drop-shadow(
+                0 0 10px
+                rgba(158, 111, 188, .75)
+            );
+
+        transform: scale(1.03);
+    }
+}
+.studio-trailer-header h2 {
+    margin: 0 0 16px;
+    color: #0f0818;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+    font-weight: 800;
+    font-family: "IRANSans", sans-serif;
+}
+
+.studio-trailer-header p {
+    margin: 0 auto;
+    max-width: 680px;
+    color: #858585;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 500;
+    font-family: "IRANSans", sans-serif;
+}
+
+
+/* =========================================================
+   VIDEO WRAPPER
+========================================================= */
+
+.studio-video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #0f0818;
+
+    box-shadow:
+        0 20px 60px rgba(15, 8, 24, .20),
+        0 0 40px rgba(158, 111, 188, .10);
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.studio-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #0f0818;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TOP BLACK HUD
+========================================================= */
+
+.studio-video-topbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 20;
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 24px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .72),
+            rgba(0, 0, 0, .38),
+            rgba(0, 0, 0, 0)
+        );
+
+    pointer-events: none;
+
+    direction: ltr;
+}
+
+
+/* =========================================================
+   BRAND - RIGHT SIDE
+========================================================= */
+
+.studio-video-brand {
+    order: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    direction: rtl;
+
+    color: #fff;
+}
+
+.studio-video-logo {
+    width: 42px;
+    height: 42px;
+
+    margin-right: -8px;
+    margin-top: -17px;
+
+    object-fit: contain;
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(255, 255, 255, .18)
+        );
+}
+
+.studio-video-brand-name {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    line-height: 1;
+}
+
+.studio-video-brand-name strong {
+    display: block;
+
+    color: #9e6fbc;
+
+    margin-bottom: 20px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 0.02;
+
+    letter-spacing: 1.68px;
+}
+
+.studio-video-brand-name span {
+    display: block;
+
+    margin-bottom: 1px;
+
+
+
+    color: rgb(171, 134, 194);
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 400;
+
+    letter-spacing: 3.12px;
+
+    line-height: 0.015px;
+}
+
+
+/* =========================================================
+   STATUS - LEFT SIDE
+========================================================= */
+
+.studio-video-status {
+    order: 1;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+    margin-left: -8px;
+
+    letter-spacing: 2px;
+
+    color: #b66ce7;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    direction: ltr;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 6px rgba(171, 73, 231, .7),
+        0 0 16px rgba(117, 7, 185, .35);
+}
+
+
+/* =========================================================
+   STATUS DOT
+========================================================= */
+
+.studio-video-status-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #6d6d6d;
+
+    transition:
+        background .3s ease,
+        box-shadow .3s ease,
+        opacity .3s ease;
+}
+
+
+/* =========================================================
+   STATUS WHILE PLAYING
+========================================================= */
+
+.studio-video-wrapper.is-playing
+.studio-video-status {
+    color: #b66ce7;
+
+    background: none;
+}
+
+
+/* =========================================================
+   PLAYING DOT BLINK
+========================================================= */
+
+.studio-video-wrapper.is-playing
+.studio-video-status-dot {
+    animation:
+        studioStatusBlink 2.50s ease-in-out infinite;
+}
+
+@keyframes studioStatusBlink {
+
+    0% {
+        background: #6a3b97;
+
+        opacity: .72;
+
+        box-shadow:
+            0 0 5px rgba(106, 59, 151, .75),
+            0 0 12px rgba(106, 59, 151, .45);
+    }
+
+    50% {
+        background: #fff;
+
+        opacity: 1;
+
+        box-shadow:
+            0 0 5px #fff,
+            0 0 12px #fff,
+            0 0 24px rgba(158, 111, 188, .95),
+            0 0 38px rgba(158, 111, 188, .55);
+    }
+
+    100% {
+        background: #6a3b97;
+
+        opacity: .72;
+
+        box-shadow:
+            0 0 5px rgba(106, 59, 151, .75),
+            0 0 12px rgba(106, 59, 151, .45);
+    }
+}
+.studio-video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    pointer-events: auto;
+
+    background:
+        rgba(0, 0, 0, .35);
+
+    transition:
+        background .35s ease,
+        opacity .35s ease;
+}
+
+
+/*
+   هنگام توقف:
+   هاله مشکی کل ویدیو را می‌پوشاند
+*/
+
+.studio-video-wrapper.is-paused
+.studio-video-overlay {
+    opacity: 1;
+}
+
+
+/*
+   هنگام پخش:
+   هاله مشکی جمع و محو می‌شود
+*/
+
+.studio-video-wrapper.is-playing
+.studio-video-overlay {
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.studio-video-overlay:hover  {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, .35),
+        0 0 42px rgba(158, 111, 188, .60);
+}
+
+/* =========================================================
+   PLAY CIRCLE
+========================================================= */
+
+.studio-video-play {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(15, 8, 24, .82);
+
+    border:
+        1px solid rgba(158, 111, 188, .45);
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, .18),
+        0 0 30px rgba(158, 111, 188, .35);
+
+    transform: scale(1);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+/* =========================================================
+   PLAY ICON
+========================================================= */
+
+.studio-video-play-icon {
+    width: 32px;
+    height: 32px;
+
+    color: #9971b3;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   BOTTOM CONTROLS
+   هاله مشکی داخل خود ویدیو
+========================================================= */
+
+.studio-video-controls {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 20;
+
+    padding:
+        50px
+        18px
+        14px;
+
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .92) 0%,
+            rgba(0, 0, 0, .78) 25%,
+            rgba(0, 0, 0, .52) 50%,
+            rgba(0, 0, 0, .22) 75%,
+            rgba(0, 0, 0, 0) 100%
+        );
+
+    pointer-events: none;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+
+/*
+   کنترل‌ها همچنان قابل کلیک باشند
+*/
+
+.studio-video-controls
+.studio-video-progress,
+
+.studio-video-controls
+.studio-video-control-row {
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.studio-video-progress {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    margin-bottom: 17px;
+}
+
+.studio-video-progress input[type="range"] {
+    width: 100%;
+
+    height: 4px;
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: 0;
+
+    outline: none;
+
+    border-radius: 100000px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            to right,
+            #9e6fbc 0%,
+            #9e6fbc var(--progress, 0%),
+            rgba(255, 255, 255, .28) var(--progress, 0%),
+            rgba(255, 255, 255, .28) 100%
+        );
+}
+
+
+/* =========================================================
+   PROGRESS - WEBKIT TRACK
+========================================================= */
+
+.studio-video-progress
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            to right,
+            #9e6fbc 0%,
+            #9e6fbc var(--progress, 0%),
+            rgba(255, 255, 255, .28) var(--progress, 0%),
+            rgba(255, 255, 255, .28) 100%
+        );
+}
+
+
+/* =========================================================
+   PROGRESS - WEBKIT THUMB
+========================================================= */
+
+.studio-video-progress
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 14px;
+    height: 14px;
+
+    margin-top: -4.5px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid #fff;
+
+    background:
+        #9e6fbc;
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, .45),
+        0 0   1px #fff,
+        0 0 12px rgba(158, 111, 188, .95),
+        0 0 20px rgba(158, 111, 188, .55);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.studio-video-progress
+input[type="range"]:hover::-webkit-slider-thumb {
+    transform: scale(1.15);
+
+    box-shadow:
+        50 50 50 1px #fff,
+        10px 10px 7px #fff,
+        0 0 14px rgba(158, 111, 188, 1),
+        0 0 22px rgba(158, 111, 188, .75);
+}
+
+
+/* =========================================================
+   PROGRESS - FIREFOX
+========================================================= */
+
+.studio-video-progress
+input[type="range"]::-moz-range-track {
+    height: 4px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, .28);
+}
+
+.studio-video-progress
+input[type="range"]::-moz-range-progress {
+    height: 4px;
+
+    border-radius: 999px;
+
+    background:
+        #9e6fbc;
+}
+
+.studio-video-progress
+input[type="range"]::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid #fff;
+
+    background:
+        #9e6fbc;
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, .45),
+        0 0 5px #fff,
+        0 0 12px rgba(158, 111, 188, .95),
+        0 0 20px rgba(158, 111, 188, .55);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTROL ROW
+========================================================= */
+
+.studio-video-control-row {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   ALL CONTROL BUTTONS
+========================================================= */
+
+.studio-control-button {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        #d8c9df;
+
+    background:
+        transparent;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+/*
+   هاور عمومی:
+   بنفش
+*/
+
+.studio-control-button:hover {
+    color:
+        #b888e2;
+
+    background:
+        rgba(34, 29, 29, 0.85);
+}
+
+
+/* =========================================================
+   PLAY / PAUSE CONTROL
+   استایل مستقل
+========================================================= */
+
+.studio-main-control {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 7px;
+
+    color:
+        #0e0d0d;
+
+    background:
+        #9869a7;
+
+    box-shadow:
+        0 0 14px rgba(158, 111, 188, .35);
+}
+
+
+/*
+   هاور Play/Pause
+*/
+
+.studio-main-control:hover {
+    color:
+        #000;
+
+    background:
+        #d6d2d2;
+}
+
+
+/* =========================================================
+   PLAY / PAUSE ICON
+========================================================= */
+
+.studio-video-control-play-icon {
+    width: 15px;
+    height: 15px;
+
+    color:
+        #050208;
+
+    stroke-width: 2.2;
+}
+
+
+/* =========================================================
+   VOLUME
+========================================================= */
+
+.studio-volume-control {
+    width: 30px;
+    height: 30px;
+}
+
+.studio-volume-control svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.studio-video-time {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-left: 3px;
+
+    color:
+        rgba(255, 255, 255, .82);
+
+    font-family:
+        "IRANSans",
+        sans-serif;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FULLSCREEN
+   هاور مستقل از Volume
+========================================================= */
+
+.fullscreen-control {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: 0;
+
+    padding: 6px;
+
+    border: 0;
+
+    background:
+        transparent;
+
+    color:
+        #a8a0ad;
+
+    cursor: pointer;
+
+    transition:
+        color .2s ease,
+        background .2s ease;
+}
+
+
+/*
+   هاور Fullscreen فقط سفید
+*/
+
+.studio-control-button.fullscreen-control:hover {
+    color:
+        #fff;
+
+    background:
+        rgba(41, 41, 41, .88);
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, .08);
+}
+
+.fullscreen-control svg {
+    width: 15px;
+    height: 15px;
+
+    stroke-width: 2;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .studio-trailer {
+        padding:
+            70px
+            16px;
+    }
+
+    .studio-video-wrapper {
+        border-radius:
+            20px;
+    }
+
+    .studio-video-topbar {
+        min-height:
+            64px;
+
+        padding:
+            12px
+            14px;
+    }
+
+    .studio-video-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .studio-video-brand-name strong {
+        font-size: 17px;
+    }
+
+    .studio-video-brand-name span {
+        font-size: 8px;
+    }
+
+    .studio-video-status {
+        font-size: 10px;
+    }
+
+    .studio-video-play {
+        width: 68px;
+        height: 68px;
+    }
+
+    .studio-video-play-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .studio-video-controls {
+        padding:
+            10px
+            12px
+            12px;
+    }
+
+    .studio-control-button {
+        width: 31px;
+        height: 31px;
+    }
+
+    .studio-video-time {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .studio-video-controls {
+        padding:
+            8px
+            9px
+            9px;
+    }
+
+    .studio-video-control-row {
+        gap: 5px;
+    }
+
+    .studio-video-time {
+        min-width: 66px;
+        font-size: 9px;
+    }
+
+    .studio-main-control {
+        width: 30px;
+        height: 30px;
+    }
+
+    .studio-volume-control {
+        width: 28px;
+        height: 28px;
+    }
+
+    .fullscreen-control {
+        width: 28px;
+        height: 28px;
+    }
+}
+.studio-video-hover-zone:hover
+~ .studio-video-overlay
+.studio-video-play {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, .30),
+        0 0 42px rgba(158, 111, 188, .55);
+}
+
+.studio-video-top-glow {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 90px;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, .78) 0%,
+            rgba(0, 0, 0, .52) 45%,
+            rgba(0, 0, 0, .20) 75%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+.studio-video-hover-zone {
+    position: absolute;
+
+    top: 90px;
+    left: 0;
+    right: 0;
+    bottom: 95px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.studio-video-bottom-glow {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 95px;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .92) 0%,
+            rgba(0, 0, 0, .72) 35%,
+            rgba(0, 0, 0, .38) 65%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+.studio-video-top-glow,
+.studio-video-hover-zone,
+.studio-video-bottom-glow {
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   STUDIO VIDEO — DARK MODE
+   ========================================================= */
+
+body.dark-mode .studio-trailer {
+    background: #1a1028;
+    color: #ffffff;
+
+    transition:
+        background-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+body.dark-mode .studio-trailer-header h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .studio-trailer-header p {
+    color: #cfc3d5;
+}
+
+body.dark-mode .studio-trailer-eyebrow {
+    color: #c19ed6;
+}
+
+body.dark-mode .studio-trailer-eyebrow-icon {
+    color: #9e6fbc;
+}
+
+
+/* =========================================================
+   VIDEO WRAPPER
+   ========================================================= */
+
+body.dark-mode .studio-video-wrapper {
+    background: #0f0818;
+
+    border: 1px solid rgba(158, 111, 188, 0.25);
+
+    box-shadow:
+        0 20px 60px rgba(15, 8, 24, 0.45),
+        0 0 40px rgba(158, 111, 188, 0.15),
+        inset 0 1px rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+body.dark-mode .studio-video {
+    background: #0f0818;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+body.dark-mode .studio-video-topbar {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.78),
+            rgba(15, 8, 24, 0.48),
+            rgba(15, 8, 24, 0)
+        );
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+body.dark-mode .studio-video-brand {
+    color: #ffffff;
+}
+
+body.dark-mode .studio-video-brand-name strong {
+    color: #9e6fbc;
+}
+
+body.dark-mode .studio-video-brand-name span {
+    color: #ab86c2;
+}
+
+body.dark-mode .studio-video-logo {
+    filter:
+        drop-shadow(
+            0 0 12px rgba(158, 111, 188, 0.25)
+        );
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+body.dark-mode .studio-video-status {
+    color: #b66ce7;
+
+    text-shadow:
+        0 0 6px rgba(171, 73, 231, 0.45),
+        0 0 16px rgba(117, 7, 185, 0.25);
+}
+
+
+/* =========================================================
+   PLAY OVERLAY
+   ========================================================= */
+
+body.dark-mode .studio-video-overlay {
+    background: rgba(0, 0, 0, 0.38);
+}
+
+body.dark-mode .studio-video-wrapper.is-playing
+.studio-video-overlay {
+    background: transparent;
+}
+
+
+/* =========================================================
+   PLAY CIRCLE
+   ========================================================= */
+
+body.dark-mode .studio-video-play {
+    background:
+        rgba(15, 8, 24, 0.88);
+
+    border-color:
+        rgba(158, 111, 188, 0.45);
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, 0.18),
+        0 0 30px rgba(158, 111, 188, 0.35);
+}
+
+
+/* Hover */
+body.dark-mode .studio-video-overlay:hover
+.studio-video-play {
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, 0.35),
+        0 0 42px rgba(158, 111, 188, 0.60);
+}
+
+
+/* =========================================================
+   PLAY ICON
+   ========================================================= */
+
+body.dark-mode .studio-video-play-icon {
+    color: #9971b3;
+}
+
+
+/* =========================================================
+   BOTTOM CONTROLS
+   ========================================================= */
+
+body.dark-mode .studio-video-controls {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(15, 8, 24, 0.78) 28%,
+            rgba(15, 8, 24, 0.48) 55%,
+            rgba(15, 8, 24, 0) 100%
+        );
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+body.dark-mode .studio-video-progress
+input[type="range"] {
+    background:
+        linear-gradient(
+            to right,
+            #9e6fbc 0%,
+            #9e6fbc var(--progress, 0%),
+            rgba(255, 255, 255, 0.25)
+                var(--progress, 0%),
+            rgba(255, 255, 255, 0.25) 100%
+        );
+}
+
+
+/* Webkit track */
+
+body.dark-mode .studio-video-progress
+input[type="range"]::-webkit-slider-runnable-track {
+    background:
+        linear-gradient(
+            to right,
+            #9e6fbc 0%,
+            #9e6fbc var(--progress, 0%),
+            rgba(255, 255, 255, 0.25)
+                var(--progress, 0%),
+            rgba(255, 255, 255, 0.25) 100%
+        );
+}
+
+
+/* Webkit thumb */
+
+body.dark-mode .studio-video-progress
+input[type="range"]::-webkit-slider-thumb {
+    background: #9e6fbc;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, 0.45),
+        0 0 6px rgba(255, 255, 255, 0.35),
+        0 0 12px rgba(158, 111, 188, 0.95),
+        0 0 20px rgba(158, 111, 188, 0.55);
+}
+
+
+/* Firefox */
+
+body.dark-mode .studio-video-progress
+input[type="range"]::-moz-range-track {
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+body.dark-mode .studio-video-progress
+input[type="range"]::-moz-range-progress {
+    background: #9e6fbc;
+}
+
+body.dark-mode .studio-video-progress
+input[type="range"]::-moz-range-thumb {
+    background: #9e6fbc;
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 0 1px rgba(158, 111, 188, 0.45),
+        0 0 6px rgba(255, 255, 255, 0.35),
+        0 0 12px rgba(158, 111, 188, 0.95),
+        0 0 20px rgba(158, 111, 188, 0.55);
+}
+
+
+/* =========================================================
+   CONTROL BUTTONS
+   ========================================================= */
+
+body.dark-mode .studio-control-button {
+    color: #d8c9df;
+    background: transparent;
+}
+
+body.dark-mode .studio-control-button:hover {
+    color: #b888e2;
+    background:
+        rgba(34, 29, 29, 0.85);
+}
+
+
+/* =========================================================
+   MAIN PLAY / PAUSE
+   ========================================================= */
+
+body.dark-mode .studio-main-control {
+    color: #0e0d0d;
+    background: #9869a7;
+
+    box-shadow:
+        0 0 14px rgba(158, 111, 188, 0.35);
+}
+
+body.dark-mode .studio-main-control:hover {
+    color: #000000;
+    background: #d6d2d2;
+}
+
+
+/* =========================================================
+   PLAY / PAUSE ICON
+   ========================================================= */
+
+body.dark-mode .studio-video-control-play-icon {
+    color: #050208;
+}
+
+
+/* =========================================================
+   TIME
+   ========================================================= */
+
+body.dark-mode .studio-video-time {
+    color:
+        rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   FULLSCREEN
+   ========================================================= */
+
+body.dark-mode .fullscreen-control {
+    color: #a8a0ad;
+}
+
+body.dark-mode
+.studio-control-button.fullscreen-control:hover {
+    color: #ffffff;
+
+    background:
+        rgba(41, 41, 41, 0.88);
+
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   TOP GLOW
+   ========================================================= */
+
+body.dark-mode .studio-video-top-glow {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(15, 8, 24, 0.55) 45%,
+            rgba(15, 8, 24, 0.18) 75%,
+            rgba(15, 8, 24, 0) 100%
+        );
+}
+
+
+/* =========================================================
+   BOTTOM GLOW
+   ========================================================= */
+
+body.dark-mode .studio-video-bottom-glow {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(15, 8, 24, 0.72) 35%,
+            rgba(15, 8, 24, 0.38) 65%,
+            rgba(15, 8, 24, 0) 100%
+        );
+}

@@ -1,0 +1,766 @@
+/* ==========================
+   About Section
+========================== */
+
+.about{
+
+    position: relative;
+
+    padding: 120px 0;
+
+    background: rgb(221, 206, 224);
+
+    overflow: hidden;
+
+}
+
+/* ==========================
+   Content
+========================== */
+
+.about-content{
+
+    direction: rtl;
+
+    max-width: 760px;
+
+    margin-right: 0;
+
+    margin-left: auto;
+
+    text-align: right;
+
+    flex: 1;
+
+}
+
+
+/* ==========================
+   Small Title
+========================== */
+
+.about-tags{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    gap: 14px;
+
+    margin-top: 30px;
+
+    align-items: center;
+
+    padding: 1px 1px;
+
+    border-radius: 999px;
+
+
+    margin-bottom: 22px;
+
+    direction: rtl;
+
+
+}
+
+/* ==========================
+   Main Title
+========================== */
+
+.about-title {
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: -.025em;
+
+    line-height: 1.15;
+
+    color: #0F0818;
+
+    margin-bottom: 28px;
+
+    direction: rtl;
+
+}
+
+
+/* ==========================
+   Subtitle
+========================== */
+
+.about-subtitle{
+
+    padding-right:18px;
+
+    border-right:2px solid rgba(106,59,151,.25);
+
+    color:rgba(106,59,151,.72);
+
+    font-size:1rem;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-style:italic;
+
+    font-weight:500;
+
+    line-height:1.9;
+
+    margin-bottom:42px;
+
+    direction: rtl;
+
+}
+
+/* ==========================
+   Text
+========================== */
+
+.about-text{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+    text-align: right;
+
+    direction: rtl;
+
+}
+
+.about-text p{
+
+    font-weight: 400;
+
+    font-family: "IRANSans", sans-serif;
+
+    color: #3b3b3b;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    text-align: justify;
+
+    letter-spacing: -0.3px;
+
+}
+
+/* ==========================
+   Tags
+========================== */
+
+
+
+.about-tags span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:7px 15px;
+
+    background:#fff;
+
+    border:1px solid rgba(106,59,151,.12);
+
+    border-radius:12px;
+
+    color:#754f99;
+
+    font-size:12px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight:500;
+
+    transition:.35s;
+
+    cursor:default;
+
+}
+/* ==========================
+   Decoration
+========================== */
+
+.about::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    background: radial-gradient(circle,
+        rgba(158,111,188,.12),
+        transparent 70%);
+
+    top: -180px;
+
+    left: -120px;
+
+    pointer-events: none;
+
+}
+
+.about::after{
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    background: radial-gradient(circle,
+        rgba(184,149,206,.12),
+        transparent 70%);
+
+    bottom: -180px;
+
+    right: -100px;
+
+    pointer-events: none;
+
+}
+
+
+
+.about-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content: flex-start;
+
+    color: rgb(184, 149, 206);
+
+    gap:10px;
+
+    margin-bottom:22px;
+
+    direction: rtl;
+
+
+}
+
+.about-heading-icon{
+
+
+    width:22px;
+
+    height:22px;
+
+    color:var(--brand-gold);
+
+    flex-shrink:0;
+
+    stroke-width:2;
+
+}
+
+.about-heading-text{
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--brand-gold);
+
+
+}
+
+
+
+.about-wrapper {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    direction: ltr;
+}
+
+
+
+.about-card{
+
+    width:456px;
+
+    max-width: 456px;
+
+    flex-shrink:0;
+
+    direction: ltr;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.about-final-word {
+   display: block;
+ }
+
+
+/* ==========================
+   Responsive About
+========================== */
+
+@media (max-width: 1200px) {
+
+    .about {
+        padding: 100px 0;
+    }
+
+    .about-wrapper {
+        gap: 50px;
+
+
+    }
+
+    .about-card {
+        width: 400px;
+    }
+
+    .about-content {
+        max-width: 680px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-tags span {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: unset;
+        white-space: nowrap;
+    }
+
+
+}
+
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width: 992px) {
+
+    .about {
+        padding: 90px 0;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 760px;
+        margin: 0;
+        text-align: right;
+    }
+
+    .about-card {
+        width: 100%;
+        max-width: 430px;
+        margin-top: 0;
+    }
+
+    .about-title {
+        font-size: 34px;
+    }
+
+    .about-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .about-text {
+        gap: 22px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.9;
+        letter-spacing: 1.99px;
+    }
+
+    .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-tags span {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: unset;
+        white-space: nowrap;
+    }
+
+
+}
+
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 640px) {
+
+    .about-final-word {
+       display: inline;
+    }
+
+    .about {
+        padding: 70px 0;
+    }
+
+    .about-wrapper {
+        gap: 35px;
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-heading {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .about-heading-icon {
+        width: 19px;
+        height: 19px;
+    }
+
+    .about-heading-text {
+        font-size: 12px;
+        letter-spacing: .12em;
+    }
+
+    .about-title {
+        font-size: 31px;
+        line-height: 1.35;
+        margin-bottom: 20px;
+    }
+
+    .about-subtitle {
+        padding-right: 14px;
+        font-size: .88rem;
+        line-height: 1.8;
+        margin-bottom: 26px;
+    }
+
+    .about-text {
+        gap: 20px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: -0.5px;
+        text-align: right;
+    }
+
+
+
+.about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-tags span {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: unset;
+        white-space: nowrap;
+    }
+
+
+
+    .about-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width: 400px) {
+
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-title {
+        font-size: 31px;
+    }
+
+    .about-heading-text {
+        font-size: 11px;
+    }
+
+    .about-subtitle {
+        font-size: .82rem;
+    }
+
+    .about-text p {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-tags span {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: unset;
+        white-space: nowrap;
+    }
+}
+
+
+/* ==========================
+   About Tags
+   479px and below
+========================== */
+
+@media (max-width: 479px) {
+
+    .about-tags {
+        display: grid;
+
+        grid-template-columns: auto auto;
+
+        /* فاصله بین کادرها */
+        column-gap: 1px;
+        row-gap: 10px;
+
+        width: 100%;
+
+        justify-content: start;
+        align-items: stretch;
+    }
+
+    .about-tags span {
+        width: 95%;
+        min-width: 0;
+
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    /* کادر سوم */
+    .about-tags span:nth-child(3) {
+        grid-column: 1;
+
+        /* کمی بلندتر */
+        width: 109%;
+
+        /* کمی بزرگ‌تر */
+        min-height: 5px;
+    }
+}
+
+/* ==========================
+   VERY SMALL MOBILE
+   311px and below
+========================== */
+
+@media (max-width: 311px) {
+
+    .about-tags {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
+    .about-tags span {
+        width: 120px;
+
+        min-width: 120px;
+
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    /* کادر سوم همچنان بزرگ‌تر و کشیده‌تر باشد */
+    .about-tags span:nth-child(3) {
+        width: 145px;
+
+        min-width: 145px;
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT - KARNAY DARK MODE
+   ========================================================= */
+
+body.dark-mode .about {
+    background: #0e0718;
+    color: #f8f7f3;
+}
+
+
+/* =========================================================
+   ABOUT HEADING
+   ========================================================= */
+
+body.dark-mode .about-heading {
+    color: #b599c7;
+}
+
+body.dark-mode .about-heading-icon {
+    color: #b895ce;
+}
+
+body.dark-mode .about-heading-text {
+    color: #b895ce;
+}
+
+
+/* =========================================================
+   ABOUT TITLE
+   ========================================================= */
+
+body.dark-mode .about-title {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ABOUT SUBTITLE
+   ========================================================= */
+
+body.dark-mode .about-subtitle {
+    color: rgba(184, 157, 201, 0.88);
+
+    border-right-color:
+        rgba(158, 111, 188, 0.32);
+}
+
+
+/* =========================================================
+   ABOUT TEXT
+   ========================================================= */
+
+body.dark-mode .about-text p {
+    color: rgba(250, 247, 242, 0.78);
+}
+
+
+/* =========================================================
+   ABOUT TAGS
+   ========================================================= */
+
+body.dark-mode .about-tags span {
+    background: #0f0818;
+
+    border-color:
+        rgba(158, 111, 188, 0.22);
+
+    color: #b895ce;
+
+    box-shadow:
+        inset 0 0 12px rgba(158, 111, 188, 0.025);
+}
+
+
+/* =========================================================
+   ABOUT DECORATIVE GLOW
+   ========================================================= */
+
+body.dark-mode .about::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(158, 111, 188, 0.14),
+            transparent 70%
+        );
+}
+
+body.dark-mode .about::after {
+    background:
+        radial-gradient(
+            circle,
+            rgba(106, 59, 151, 0.14),
+            transparent 70%
+        );
+}

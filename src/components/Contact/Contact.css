@@ -1,0 +1,1646 @@
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
+
+.contact {
+    position: relative;
+    overflow: hidden;
+
+    padding: 96px 0;
+
+    background: var(--color-brand-ivory, #faf7f2);
+    color: var(--color-brand-plum, #0f0818);
+
+    direction: rtl;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.contact-bg {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.contact-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.contact-glow-top {
+    top: -80px;
+    right: 25%;
+
+    width: 320px;
+    height: 320px;
+
+    background: rgba(184, 149, 206, 0.10);
+
+    filter: blur(100px);
+}
+
+.contact-glow-bottom {
+    bottom: 0;
+    left: 25%;
+
+    width: 384px;
+    height: 384px;
+
+    background: rgba(106, 59, 151, 0.08);
+
+    filter: blur(120px);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(1280px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.contact-heading {
+    text-align: center;
+
+    margin-bottom: 56px;
+}
+
+.contact-eyebrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+.contact-eyebrow-icon {
+    width: 20px;
+    height: 20px;
+
+    color: var(--color-brand-gold, #b895ce);
+
+    flex-shrink: 0;
+}
+
+.contact-eyebrow span {
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    color: var(--color-brand-gold, #b895ce);
+}
+
+.contact-title {
+    margin: 0 0 16px;
+
+    font-family: var(--font-display, "IRANSans", sans-serif);
+    font-size: clamp(30px, 4vw, 40px);
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    color: var(--color-brand-plum, #0f0818);
+}
+
+.contact-subtitle {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: #57505c;
+}
+
+
+/* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   WRAPPERS
+   ========================================================= */
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+    min-width: 0;
+}
+
+.contact-form-wrapper {
+    order: 1;
+}
+
+.contact-info-wrapper {
+    order: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   GLASS / MAIN CARD
+   ========================================================= */
+
+.contact-card {
+    position: relative;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(106, 59, 151, 0.12);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0.62)
+        );
+
+    box-shadow:
+        0 18px 42px rgba(106, 59, 151, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.90);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.55),
+            transparent 45%
+        );
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.contact-form-card {
+    padding: 36px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.contact-card-heading {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px dashed
+        rgba(106, 59, 151, 0.10);
+}
+
+.contact-card-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--color-brand-lavender, #e9deef);
+
+    color: var(--color-brand-amethyst, #6a3b97);
+}
+
+.contact-card-icon svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 1.8;
+}
+
+.contact-card-heading h3 {
+    margin: 0;
+
+    font-family: var(--font-display, "IRANSans", sans-serif);
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    color: var(--color-brand-amethyst, #6a3b97);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   HONEYPOT
+   ========================================================= */
+
+.contact-honeypot {
+    position: absolute;
+
+    left: -9999px;
+    top: auto;
+
+    width: 0;
+    height: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.contact-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.contact-field label {
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: rgba(106, 59, 151, 0.82);
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA
+   ========================================================= */
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(106, 59, 151, 0.10);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    padding: 14px 16px;
+
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 14px;
+
+    color: var(--color-brand-plum, #0f0818);
+
+    background: rgba(255, 255, 255, 0.88);
+
+    transition:
+        border-color 0.255s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.contact-field input {
+    min-height: 50px;
+}
+
+.contact-field textarea {
+    min-height: 150px;
+
+    resize: none;
+
+    line-height: 1.8;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #aaa2ad;
+}
+
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: rgba(67, 12, 119, 0.35);
+
+   border-width: 2px;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 4px rgba(106, 59, 151, 0.06);
+}
+
+
+/* =========================================================
+   MESSAGE FIELD
+   ========================================================= */
+
+.contact-message-field {
+    flex: 1;
+}
+
+.contact-message-field textarea {
+    flex: 1;
+}
+
+/* =========================================================
+   CONTACT SUBMIT BUTTON
+   ========================================================= */
+
+.contact-submit {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 52px;
+
+    padding: 16px 24px;
+
+    gap: 10px;
+
+    border: 1px solid rgba(158, 111, 188, 0.25);
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6a3b97 0%,
+            #9e6fbc 55%,
+            #9e6fbc 100%
+        );
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 15px -3px rgba(106, 59, 151, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================================
+   WHITE GLASS HIGHLIGHT
+   ========================================================= */
+
+.contact-submit::before {
+    content: "";
+
+    position: absolute;
+
+    top: -20%;
+    bottom: -20%;
+
+    right: -5%;
+
+    width: 170%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 30%,
+        rgba(255, 255, 255, 0.16) 60%,
+        rgba(255, 255, 255, 0.32) 82%,
+        rgba(255, 255, 255, 0.48) 100%
+    );
+
+    filter: blur(10px);
+
+    opacity: 0;
+
+    transform: translateX(25%);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s ease;
+}
+
+.contact-submit:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   HOVER — KARNAY STYLE
+   ========================================================= */
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(158, 111, 188, 0.35);
+
+    box-shadow:
+        0 14px 22px -5px rgba(106, 59, 151, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+
+
+}
+
+
+
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.contact-submit:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 8px 16px -4px rgba(106, 59, 151, 0.12);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.contact-submit-icon {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-submit-icon svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.contact-submit span {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTACT INFO CARD
+   ========================================================= */
+
+.contact-info-card {
+    padding: 28px;
+
+
+
+
+
+}
+
+.contact-info-list {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   INFO ITEM
+   ========================================================= */
+
+.contact-info-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px dashed
+        rgba(106, 59, 151, 0.10);
+}
+
+.contact-info-item:first-child {
+    padding-top: 8px;
+}
+
+.contact-info-item-last {
+    border-bottom: none;
+
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   INFO ICON
+   ========================================================= */
+
+.contact-info-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    color: var(--color-brand-amethyst, #6a3b97);
+
+    background:
+        rgba(233, 222, 239, 0.72);
+
+    border:
+        1px solid
+        rgba(106, 59, 151, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.contact-info-icon svg {
+    width: 20px;
+    height: 20px;
+
+    stroke-width: 1.75;
+}
+
+.contact-info-item:hover .contact-info-icon {
+
+
+    background:
+        rgba(233, 222, 239, 0.95);
+
+
+}
+
+
+/* =========================================================
+   INFO CONTENT
+   ========================================================= */
+
+.contact-info-content {
+    min-width: 0;
+
+    flex: 1;
+
+    padding-top: 2px;
+}
+
+.contact-info-content h4 {
+    margin: 0 0 6px;
+
+    font-family: var(--font-display, "IRANSans", sans-serif);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+
+    color: var(--color-brand-amethyst, #6a3b97);
+}
+
+.contact-info-content p {
+    margin: 0;
+
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: #514b56;
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+.contact-phone {
+    display: inline-flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    font-family: var(--font-mono, "IRANSans", sans-serif);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: var(--color-brand-plum, #0f0818);
+
+    transition:
+        color 0.25s ease;
+}
+
+.contact-phone:hover {
+    color: var(--color-brand-amethyst, #6a3b97);
+}
+
+
+/* =========================================================
+   TELEGRAM
+   ========================================================= */
+
+.contact-telegram {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--color-brand-amethyst, #6a3b97);
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-telegram svg {
+    width: 14px;
+    height: 14px;
+
+    opacity: 0.7;
+}
+
+.contact-telegram:hover {
+    color: var(--color-brand-plum, #0f0818);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   RESPONSE TIME
+   ========================================================= */
+
+.contact-response {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 58px;
+
+    padding: 14px 20px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(106, 59, 151, 0.10);
+
+    border-radius: 16px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    color: #66606a;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 24px rgba(106, 59, 151, 0.04);
+}
+
+.contact-response svg {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    color: var(--color-brand-gold, #b895ce);
+}
+
+.contact-response span {
+    font-family: var(--font-sans, "IRANSans", sans-serif);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   768px - 1023px
+   ترتیب:
+   1. اطلاعات کرنای
+   2. پاسخ‌گویی 24 ساعت
+   3. فرم
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .contact {
+        padding: 80px 0;
+    }
+
+    .contact-container {
+        width: min(1280px, calc(100% - 48px));
+    }
+
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* اطلاعات کرنای */
+    .contact-info-wrapper {
+        width: 100%;
+        order: 1;
+    }
+
+    /* پاسخ‌گویی */
+    .contact-response {
+        width: 100%;
+        order: 2;
+        margin: 0;
+    }
+
+    /* فرم */
+    .contact-form-wrapper {
+        width: 100%;
+        order: 3;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   زیر 767px
+   ترتیب:
+   1. اطلاعات کرنای
+   2. پاسخ‌گویی 24 ساعت
+   3. فرم
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .contact {
+        padding: 72px 0;
+    }
+
+    .contact-container {
+        width: calc(100% - 32px);
+    }
+
+    .contact-heading {
+        margin-bottom: 40px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    .contact-subtitle {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+    }
+
+    /* اطلاعات کرنای */
+    .contact-info-wrapper {
+        width: 100%;
+        order: 1;
+    }
+
+    /* پاسخ‌گویی */
+    .contact-response {
+        width: 100%;
+        order: 2;
+        margin: 0;
+        min-height: 54px;
+        padding: 12px 14px;
+    }
+
+    .contact-response span {
+        font-size: 11px;
+    }
+
+    /* فرم */
+    .contact-form-wrapper {
+        width: 100%;
+        order: 3;
+    }
+
+    .contact-form-card {
+        padding: 24px 20px;
+    }
+
+    .contact-info-card {
+        padding: 20px;
+    }
+
+    .contact-card-heading {
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+    }
+
+    .contact-card-heading h3 {
+        font-size: 15px;
+    }
+
+    .contact-info-item {
+        gap: 12px;
+        padding: 18px 0;
+    }
+
+    .contact-info-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+    }
+
+    .contact-info-content h4 {
+        font-size: 14px;
+    }
+
+    .contact-info-content p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+   زیر 380px
+   ========================================================= */
+
+@media (max-width: 379px) {
+
+    .contact-container {
+        width: calc(100% - 24px);
+    }
+
+    .contact-form-card {
+        padding: 20px 16px;
+    }
+
+    .contact-info-card {
+        padding: 18px 16px;
+    }
+
+    .contact-title {
+        font-size: 25px;
+    }
+
+    .contact-card-heading h3 {
+        font-size: 14px;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        font-size: 13px;
+    }
+
+    .contact-info-item {
+        gap: 10px;
+    }
+
+    .contact-info-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .contact-info-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-submit {
+        font-size: 13px;
+        padding-inline: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px به بالا
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .contact-container {
+        width: calc(100% - 64px);
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+
+    .contact-grid {
+        display: grid;
+
+        /* ستون راست = فرم
+           ستون چپ = اطلاعات */
+
+        grid-template-columns:
+            minmax(520px, 1.45fr)
+            minmax(380px, 0.95fr);
+
+        grid-template-areas:
+            "form info"
+            "form response";
+
+        column-gap: 32px;
+        row-gap: 20px;
+
+        width: 100%;
+
+        align-items: stretch;
+    }
+
+
+    /* =====================================================
+       فرم ثبت درخواست
+       سمت راست
+       ===================================================== */
+
+    .contact-form-wrapper {
+        grid-area: form;
+
+        width: 100%;
+
+        min-width: 0;
+
+
+
+        order: unset;
+    }
+
+
+    .contact-form-card {
+        width: 100%;
+
+        height: 100%;
+
+        min-height: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       اطلاعات کرنای
+       سمت چپ - بالا
+       ===================================================== */
+
+    .contact-info-wrapper {
+        grid-area: info;
+
+        width: 100%;
+
+        min-width: 0;
+
+        display: block;
+
+        order: unset;
+    }
+
+
+    .contact-info-card {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       پاسخ‌گویی 24 ساعت
+       سمت چپ - زیر اطلاعات
+       ===================================================== */
+
+    .contact-response {
+        grid-area: response;
+
+        width: 100%;
+
+        min-height: 56px;
+
+        margin: 0;
+
+        box-sizing: border-box;
+
+        order: unset;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact *,
+    .contact *::before,
+    .contact *::after {
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CONTACT — DARK MODE / KARNAY STYLE
+   ========================================================= */
+
+body.dark-mode .contact {
+    background: #1a1028;
+    color: #fff;
+}
+
+
+/* =========================================================
+   DARK MODE BACKGROUND GLOW
+   ========================================================= */
+
+body.dark-mode .contact-bg {
+    opacity: 1;
+}
+
+body.dark-mode .contact-glow-top {
+    background: rgba(158, 111, 188, 0.14);
+    filter: blur(110px);
+}
+
+body.dark-mode .contact-glow-bottom {
+    background: rgba(106, 59, 151, 0.18);
+    filter: blur(130px);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+body.dark-mode .contact-eyebrow-icon {
+    color: #b895ce;
+}
+
+body.dark-mode .contact-eyebrow span {
+    color: #b895ce;
+}
+
+body.dark-mode .contact-title {
+    color: #f3eeee;
+}
+
+body.dark-mode .contact-subtitle {
+    color: rgba(252, 252, 252, 0.68);
+}
+
+
+/* =========================================================
+   GLASS CARDS
+   ========================================================= */
+
+body.dark-mode .contact-card {
+    border: 1px solid rgba(122, 16, 243, 0.219);
+
+    background:
+            #150c20;
+
+
+     box-shadow:
+        0 0 55px rgba(0, 0, 0, 0.38),
+        0 0 40px rgba(106, 59, 151, 0.22),
+        0 0 90px rgba(106, 59, 151, 0.1);
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+
+}
+
+
+/* =========================================================
+   DARK MODE — SOFT IRREGULAR INNER LIGHT
+   ========================================================= */
+
+body.dark-mode .contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8%;
+    right: 37%;
+
+    width: 58%;
+    height: 70%;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse at 35% 42%,
+            rgba(158, 111, 188, 0.11) 0%,
+            rgba(106, 59, 151, 0.065) 28%,
+            rgba(106, 59, 151, 0.025) 48%,
+            transparent 72%
+        );
+
+    filter: blur(18px);
+
+    opacity: 1;
+
+    transform:
+        rotate(-12deg)
+        scale(1.08);
+
+    z-index: 0;
+}
+
+
+
+
+/* =========================================================
+   FORM CARD HEADING
+   ========================================================= */
+
+body.dark-mode .contact-card-heading {
+    border-bottom-color:
+        rgba(255, 252, 252, 0.1);
+}
+
+body.dark-mode .contact-card-icon {
+    background:
+        rgba(185, 152, 206, 0.16);
+
+    color: #7c17bb;
+
+    border:
+        1px solid
+        rgba(15, 15, 15, 0.16);
+
+    box-shadow:
+        0 0 22px rgba(106, 59, 151, 0.10);
+}
+
+body.dark-mode .contact-card-heading h3 {
+    color: #ddd3e2;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+body.dark-mode .contact-field label {
+    color: #a7a4a8;
+}
+
+
+/* =========================================================
+   INPUT / TEXTAREA
+   ========================================================= */
+
+body.dark-mode .contact-field input,
+body.dark-mode .contact-field textarea {
+    color: #fff;
+
+    background:
+        rgba(22, 11, 37, 0.58);
+
+    border:
+        1px solid
+        rgba(84, 40, 134, 0.452);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* متن داخل input */
+
+body.dark-mode .contact-field input,
+body.dark-mode .contact-field textarea {
+    caret-color: #b895ce;
+}
+
+
+/* Placeholder */
+
+body.dark-mode .contact-field input::placeholder,
+body.dark-mode .contact-field textarea::placeholder {
+    color: rgba(250, 247, 242, 0.40);
+}
+
+
+/* Focus */
+
+body.dark-mode .contact-field input:focus,
+body.dark-mode .contact-field textarea:focus {
+    border-color:
+        rgba(158, 111, 188, 0.55);
+
+    background:
+       rgba(22, 11, 37, 0.58);
+
+    box-shadow:
+        0 0 0 3px rgba(106, 59, 151, 0.14),
+        0 0 20px rgba(106, 59, 151, 0.10);
+}
+
+
+/* =========================================================
+   CONTACT INFO
+   ========================================================= */
+
+body.dark-mode .contact-info-item {
+    border-bottom-color:
+        rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================================
+   INFO ICON
+   ========================================================= */
+
+body.dark-mode .contact-info-icon {
+    color: #b590cc;
+
+    background:
+        rgba(78, 10, 117, 0.12);
+
+    border:
+        1px solid
+        rgba(158, 111, 188, 0.16);
+
+    box-shadow:
+        0 0 20px rgba(106, 59, 151, 0.07);
+}
+
+
+/* =========================================================
+   DARK MODE — INFO ICON / NO HOVER
+   ========================================================= */
+
+body.dark-mode .contact-info-item:hover .contact-info-icon {
+    background: rgba(78, 10, 117, 0.12);
+
+    color: #b590cc;
+
+    border-color: rgba(158, 111, 188, 0.16);
+
+    box-shadow: 0 0 20px rgba(106, 59, 151, 0.07);
+
+    transform: none;
+}
+
+
+/* =========================================================
+   INFO TEXT
+   ========================================================= */
+
+body.dark-mode .contact-info-content h4 {
+    color: #a17eb4;
+}
+
+body.dark-mode .contact-info-content p {
+    color:
+        rgba(248, 248, 248, 0.74);
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+body.dark-mode .contact-phone {
+    color: #fff;
+}
+
+body.dark-mode .contact-phone:hover {
+    color: #b895ce;
+}
+
+
+/* =========================================================
+   TELEGRAM
+   ========================================================= */
+
+body.dark-mode .contact-telegram {
+    color: #b895ce;
+}
+
+body.dark-mode .contact-telegram:hover {
+    color: #fff;
+}
+
+
+/* =========================================================
+   RESPONSE TIME
+   ========================================================= */
+
+body.dark-mode .contact-response {
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    background:
+        rgba(21, 11, 36, 0.42);
+
+    color:
+        rgba(250, 247, 242, 0.62);
+
+    box-shadow:
+     0 12px 30px rgb(0, 0, 0, 0.22);
+}
+
+body.dark-mode .contact-response svg {
+    color: #b895ce;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+body.dark-mode .contact-submit {
+    border:
+        1px solid
+        rgba(158, 111, 188, 0.32);
+
+    color: #272525;
+
+    background:
+       #bfa5cf;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.28),
+        0 0 28px rgba(106, 59, 151, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+
+body.dark-mode .contact-submit::before {
+    content: "";
+
+    position: absolute;
+    inset: -10%;
+
+    pointer-events: none;
+
+    background:
+        /* هاله سمت چپ */
+        radial-gradient(
+            ellipse 48% 115% at 0% 50%,
+            rgba(106, 59, 151, 0.98) 0%,
+            rgba(106, 59, 151, 0.72) 20%,
+            rgba(106, 59, 151, 0.40) 38%,
+            rgba(106, 59, 151, 0.16) 58%,
+            transparent 78%
+        ),
+
+        /* هاله سمت راست */
+        radial-gradient(
+            ellipse 48% 115% at 100% 50%,
+            rgba(106, 59, 151, 0.98) 0%,
+            rgba(106, 59, 151, 0.72) 20%,
+            rgba(106, 59, 151, 0.40) 38%,
+            rgba(106, 59, 151, 0.16) 58%,
+            transparent 78%
+        );
+
+    filter: blur(7px);
+
+    opacity: 0;
+
+    transform: scale(1.02);
+
+    z-index: 0;
+}
+
+
+
+/* =========================================================
+   SUBMIT BUTTON — NATURAL PURPLE GLOW HOVER
+   ========================================================= */
+
+body.dark-mode .contact-submit:hover {
+    transform: translateY(-2px);
+
+    /* خود دکمه کمی سفید و نورانی می‌شود */
+    background: #bfa5cf;;
+
+
+    color: #272525;
+
+
+
+    /* هاله‌ی طبیعی در چهار طرف
+       بالا کمتر، چپ و راست بیشتر، پایین کمی قوی‌تر */
+    box-shadow:
+        /* بالا — بسیار نرم و ضعیف */
+        0 -1px 1px rgba(106, 59, 151, 0.12),
+
+        /* چپ */
+        -10px 0 28px rgba(106, 59, 151, 0.30),
+
+        /* راست */
+        10px 0 28px rgba(106, 59, 151, 0.30),
+
+        /* پایین */
+        0 12px 38px rgba(106, 59, 151, 0.36),
+
+        /* هاله‌ی کلی و خیلی نرم */
+        0 0 42px rgba(122, 72, 166, 0.20),
+
+        /* نور خیلی ظریف داخل لبه‌ی دکمه */
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 8px rgba(106, 59, 151, 0.08);
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   SUBMIT BUTTON — ACTIVE
+   ========================================================= */
+
+body.dark-mode .contact-submit:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.30),
+        0 0 20px rgba(106, 59, 151, 0.14);
+}

@@ -1,0 +1,1811 @@
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND VIDEO
+   ========================================================= */
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        brightness(.72)
+        saturate(.92)
+        contrast(1.05);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background: rgba(80, 4, 104, 0.08);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   DARK GRADIENT
+   ========================================================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 68%;
+
+    z-index: 3;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(31, 1, 43, 0.78),
+            rgba(31, 1, 43, 0.78),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   PURPLE LIGHT
+   ========================================================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+
+    background:
+        radial-gradient(
+            circle at right center,
+            rgba(158, 111, 188, .18),
+            transparent 55%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding-inline: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    animation: heroFade 1s ease;
+}
+
+
+@keyframes heroFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   MOBILE CONTENT
+   ========================================================= */
+
+.hero-mobile-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE LOGO
+   ========================================================= */
+
+.hero-logo {
+    position: relative;
+
+    width: clamp(90px, 15vw, 180px);
+    height: auto;
+
+    left: auto;
+    bottom: auto;
+
+    transform: none;
+
+    margin: 0 auto 16px;
+    padding: 0;
+
+    display: block;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    z-index: 11;
+}
+
+
+/* =========================================================
+   MOBILE TITLE
+   ========================================================= */
+
+.hero-title {
+    width: 100%;
+
+    margin: 0 0 12px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight: 500;
+
+    font-size: clamp(30px, 6vw, 58px);
+
+    line-height: 1.4;
+
+    color: #ffffff;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+    width: 100%;
+
+    max-width: 890px;
+
+    margin: 0 auto 22px;
+
+    padding: 0;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight: 400;
+
+    font-size: clamp(14px, 2vw, 20px);
+
+    line-height: 1.85;
+
+    color: rgba(250, 247, 242, 0.95);
+
+    text-align: center;
+
+    direction: rtl;
+}
+
+
+/* =========================================================
+   HERO SCROLL
+   ========================================================= */
+
+.hero-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 38px;
+}
+
+
+/* =========================================================
+   SCROLL BUTTON
+   ========================================================= */
+
+.scroll-btn {
+    position: relative;
+
+    width: 38px;
+    height: 38px;
+
+    margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.18);
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #f5f5f5;
+    font-size: 16px;
+
+    font-family: "IRANSans", sans-serif;
+
+    transition:
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+    box-shadow:
+        0 0 18px rgba(158,111,188,.18),
+        inset 0 0 12px rgba(255,255,255,.08);
+
+    animation: scrollFloat 2.5s ease-in-out infinite;
+}
+
+
+/* Hover */
+
+.scroll-btn:hover {
+    background: rgba(255,255,255,.12);
+
+    border-color: rgba(255,255,255,.35);
+
+    box-shadow:
+        0 0 25px rgba(158,111,188,.35),
+        inset 0 0 12px rgba(255,255,255,.1);
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+
+@keyframes scrollFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   DESKTOP LAYOUT
+   993px+
+   ========================================================= */
+
+.hero-desktop-layout {
+    display: none;
+}
+
+
+.hero-brand-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 8px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+
+.hero-brand-glow {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            to bottom right,
+            #6a3b97,
+            #9e6fbc
+        );
+
+    opacity: .30;
+
+    filter: blur(12px);
+
+    z-index: 0;
+}
+
+
+.hero-brand-panel {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(106, 59, 151, .15);
+
+    background: rgba(250, 247, 242, .78);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    text-align: center;
+}
+
+
+.hero-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    animation:
+        heroRingSpin 40s linear infinite;
+}
+
+
+.hero-ring-outer {
+    width: 192px;
+    height: 192px;
+
+    border:
+        1px dashed
+        rgba(158,111,188,.25);
+}
+
+
+.hero-ring-inner {
+    width: 144px;
+    height: 144px;
+
+    border:
+        1px dotted
+        rgba(158,111,188,.35);
+
+    animation-duration: 20s;
+
+    animation-direction: reverse;
+}
+
+
+@keyframes heroRingSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hero-brand-logo {
+    position: relative;
+
+    z-index: 10;
+
+    width: 208px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 16px;
+
+    filter:
+        drop-shadow(
+            0 4px 4px rgba(0,0,0,.15)
+        );
+}
+
+
+.hero-brand-panel h3 {
+    position: relative;
+
+    z-index: 10;
+
+    margin: 0 0 4px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: .04em;
+
+    color: #9e6fbc;
+}
+
+
+.hero-brand-panel p {
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 240px;
+
+    margin: 0;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #575757;
+}
+
+
+.hero-brand-dots {
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 32px;
+}
+
+
+.hero-brand-dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(106,59,151,.45);
+}
+
+
+.hero-brand-dots span.active {
+    background: #b895ce;
+
+    animation:
+        heroDotPing 1.5s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes heroDotPing {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: .45;
+    }
+}
+
+
+
+.hero-title-purple {
+    color: #9E6FBC;
+}
+
+
+/* =========================================================
+   DESKTOP
+   993px+
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+    .hero {
+        min-height: 720px;
+        height: 100vh;
+    }
+
+
+.hero-title-purple {
+    color: #9E6FBC;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight: 500;
+}
+
+
+
+.hero-content {
+        max-width: 1300px;
+
+        padding-inline: 40px;
+
+        transform: none;
+
+        padding-top: 210px;
+    }
+
+
+    /* Desktop Layout */
+
+    .hero-desktop-layout {
+        width: 100%;
+        max-width: 1300px;
+
+        margin: 0 auto;
+
+        padding: 0 40px;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(300px, 380px)
+            minmax(0, 1fr);
+
+        gap: 70px;
+
+        align-items: center;
+
+        direction: ltr;
+    }
+
+
+    /* Brand Box */
+
+    .hero-brand-box {
+        width: 385px;
+        max-width: 385px;
+
+        justify-self: start;
+
+        margin-left: -55px;
+
+        transform: translateY(-58px);
+    }
+
+
+    /* Text Side */
+
+    .hero-text-side {
+        direction: rtl;
+
+        width: 100%;
+        max-width: 720px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        text-align: right;
+
+        justify-self: end;
+
+        transform:
+            translateX(70px);
+    }
+
+
+    /* Nastaliq Title */
+
+    .hero-text-side
+    .hero-title-nastaliq-wrap {
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        color: #ffffff;
+
+
+    }
+
+
+    .hero-text-side
+    .hero-title-nastaliq {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        direction: rtl;
+
+        text-align: right;
+
+        white-space: nowrap;
+
+        margin: 0;
+
+        font-family: "IRANSans", sans-serif;
+
+    font-weight: 500;
+    }
+
+
+    .hero-nastaliq-karnay {
+        margin-left: -10px;
+    }
+
+
+    .hero-nastaliq-studio {
+        margin-left: 0;
+    }
+
+
+    /* Description */
+
+    .hero-text-side
+    .hero-description {
+        width: 100%;
+
+        max-width: 690px;
+
+        margin:
+            0
+            0
+            22px
+            0;
+
+        padding: 0;
+
+        text-align: right;
+
+        direction: rtl;
+    }
+
+
+    /* Desktop Buttons */
+
+    .hero-text-side
+    .hero-buttons {
+        width: 100%;
+
+        margin: 0;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        direction: rtl;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+
+    /*
+       ترتیب:
+       سمت راست = کاتالوگ
+       وسط = تیزر
+       سمت چپ = تلگرام
+    */
+
+    .hero-text-side .catalog-btn {
+        order: 1;
+    }
+
+    .hero-text-side .teaser-btn {
+        order: 2;
+    }
+
+    .hero-text-side .telegram-btn {
+        order: 3;
+    }
+
+
+    /* Mobile Content Off */
+
+    .hero-mobile-content {
+        display: none;
+    }
+
+
+    /* Scroll */
+
+    .hero-scroll {
+        bottom: -129px;
+    }
+
+    .hero-buttons {
+
+        transform: translateY(-10px);
+
+
+    }
+
+    .hero-btn {
+
+        direction: ltr;
+    }
+
+    .hero-desktop-description {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 0 22px 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family: "IRANSans", sans-serif;
+    font-size: 19px;
+    line-height: 2;
+    font-weight: 500;
+
+    direction: rtl;
+    text-align: right;
+}
+
+}
+
+/* =========================================================
+   HALF DESKTOP
+   993px - 1200px
+   ========================================================= */
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+   .hero {
+        min-height: 720px;
+        height: 100vh;
+    }
+
+
+    .hero-content {
+        max-width: 1300px;
+
+        padding-inline: 40px;
+
+        transform: none;
+
+        padding-top: 210px;
+    }
+
+
+    /* Desktop Layout */
+
+    .hero-desktop-layout {
+        width: 100%;
+        max-width: 1300px;
+
+        margin: 0 auto;
+
+        padding: 0 40px;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(300px, 380px)
+            minmax(0, 1fr);
+
+        gap: 70px;
+
+        align-items: center;
+
+        direction: ltr;
+    }
+
+
+    /* Brand Box */
+
+    .hero-brand-box {
+        width: 385px;
+        max-width: 385px;
+
+        justify-self: start;
+
+        margin-left: -55px;
+
+        transform: translateY(-58px);
+    }
+
+
+    /* Text Side */
+
+    .hero-text-side {
+        direction: rtl;
+
+        width: 100%;
+        max-width: 720px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        text-align: right;
+
+        justify-self: end;
+
+        transform:
+            translateX(70px);
+    }
+
+
+    /* Nastaliq Title */
+
+    .hero-text-side
+    .hero-title-nastaliq-wrap {
+        width: 100%;
+
+        margin-bottom: 20px;
+
+        color: #ffffff;
+    }
+
+
+    .hero-text-side
+    .hero-title-nastaliq {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        direction: rtl;
+
+        text-align: right;
+
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+
+    .hero-nastaliq-karnay {
+        margin-left: -10px;
+    }
+
+
+    .hero-nastaliq-studio {
+        margin-left: 0;
+    }
+
+
+    /* Description */
+
+    .hero-text-side
+    .hero-description {
+        width: 100%;
+
+        max-width: 690px;
+
+        margin:
+            0
+            0
+            22px
+            0;
+
+        padding: 0;
+
+        text-align: right;
+
+        direction: rtl;
+    }
+
+
+    /* Desktop Buttons */
+
+    .hero-text-side
+    .hero-buttons {
+        width: 100%;
+
+        margin: 0;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        direction: rtl;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+
+    /*
+       ترتیب:
+       سمت راست = کاتالوگ
+       وسط = تیزر
+       سمت چپ = تلگرام
+    */
+
+    .hero-text-side .catalog-btn {
+        order: 1;
+    }
+
+    .hero-text-side .teaser-btn {
+        order: 2;
+    }
+
+    .hero-text-side .telegram-btn {
+        order: 3;
+    }
+
+
+    /* Mobile Content Off */
+
+    .hero-mobile-content {
+        display: none;
+    }
+
+
+    /* Scroll */
+
+    .hero-scroll {
+        bottom: -129px;
+    }
+
+    .hero-buttons {
+
+        transform: translateY(-10px);
+
+
+    }
+
+    .hero-btn {
+
+        direction: ltr;
+    }
+
+    .hero-desktop-description {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+
+    margin: 0 0 22px 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family: "IRANSans", sans-serif;
+    font-size: 19px;
+    line-height: 2;
+    font-weight: 500;
+
+    direction: rtl;
+    text-align: right;
+}
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 992px
+   سه کادر از سمت راست
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .hero-content {
+        max-width: 850px;
+
+        padding-inline: clamp(24px, 5vw, 40px);
+
+        padding-top: clamp(140px, 28vh, 280px);
+
+
+    }
+
+
+
+    .hero-mobile-content .hero-buttons {
+
+        width: 100%;
+        max-width: 750px;
+
+        margin: 25px 0 0 auto;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: flex-start !important;
+        align-items: center;
+
+        gap: 12px;
+
+        direction: rtl;
+
+        transform: none;
+
+        align-self: flex-end;
+
+        position: relative;
+
+        left: 39px;
+    }
+
+
+
+    .hero-mobile-content .hero-btn {
+
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        max-width: 230px;
+
+        box-sizing: border-box;
+
+        direction: rtl !important;
+        text-align: right;
+        justify-content: flex-start;
+    }
+
+    .hero-mobile-content .hero-btn svg {
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .hero-mobile-content .hero-btn span {
+        order: 2;
+    }
+
+
+
+
+    /* ترتیب از راست */
+
+    .hero-mobile-content .catalog-btn {
+        order: 1;
+    }
+
+    .hero-mobile-content .teaser-btn {
+        order: 2;
+    }
+
+    .hero-mobile-content .telegram-btn {
+        order: 3;
+    }
+
+
+    .hero-scroll {
+        bottom: -90px;
+    }
+}
+
+
+
+
+
+
+/* =========================================================
+   MOBILE
+   481px - 768px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .hero {
+        min-height: 620px;
+        height: 100svh;
+    }
+
+
+    .hero-content {
+        max-width: 680px;
+
+        padding-inline:
+            clamp(18px, 5vw, 28px);
+
+        padding-top:
+            clamp(70px, 10vh, 110px);
+    }
+
+
+    .hero-desktop-layout {
+        display: none;
+    }
+
+
+    .hero-mobile-content {
+        display: flex;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .hero-logo {
+        width:
+            clamp(120px, 20vw, 155px);
+
+        margin:
+            0 auto
+            clamp(10px, 2vw, 15px);
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(36px, 7vw, 46px);
+
+            font-family: "IRANSans", sans-serif;
+
+        line-height: 1.4;
+
+        margin-bottom: 10px;
+    }
+
+
+    .hero-description {
+        max-width: 580px;
+
+        font-size:
+            clamp(15px, 2.5vw, 17px);
+
+            font-family: "IRANSans", sans-serif;
+
+        line-height: 1.85;
+
+        margin-bottom: 58px;
+    }
+
+
+    .hero-scroll {
+        bottom: -82px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px - 480px
+   ========================================================= */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .hero {
+        min-height: 580px;
+        height: 100svh;
+    }
+
+
+    .hero-content {
+        padding-inline:
+            clamp(14px, 5vw, 20px);
+
+        padding-top:
+            clamp(55px, 9vh, 90px);
+    }
+
+
+    .hero-desktop-layout {
+        display: none;
+    }
+
+
+    .hero-mobile-content {
+        display: flex;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .hero-logo {
+        width:
+            clamp(90px, 28vw, 135px);
+
+        margin:
+            0 auto
+            clamp(8px, 2vw, 12px);
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(28px, 9vw, 38px);
+
+        font-family: "IRANSans", sans-serif;
+
+        line-height: 1.35;
+
+        margin-bottom: 10px;
+
+        white-space: nowrap;
+    }
+
+
+    .hero-description {
+        max-width: 100%;
+
+        font-size:
+            clamp(13px, 4vw, 16px);
+
+        font-family: "IRANSans", sans-serif;
+
+        line-height: 1.8;
+
+        margin-bottom: 58px;
+    }
+
+
+    .hero-scroll {
+        bottom: -82px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL
+   زیر 320px
+   ========================================================= */
+
+@media (max-width: 319px) {
+
+    .hero {
+        min-height: 650px;
+        height: 830px;
+    }
+
+
+    .hero-content {
+        padding-inline: 10px;
+
+        padding-top:
+            70px;
+            align-items: center;
+    }
+
+
+    .hero-desktop-layout {
+        display: none;
+    }
+
+
+    .hero-mobile-content {
+        display: flex;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        justify-content: flex-start;
+    }
+
+
+    .hero-logo {
+        width:
+            clamp(65px, 45vw, 250px);
+
+        margin:
+            -52px auto 0px;
+            position: static;
+            transform: none;
+
+            transform: translate(20px, -40px);
+
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(22px, 8vw, 28px);
+
+        font-family: "IRANSans", sans-serif;
+
+        line-height: 1.3;
+
+        margin: 20px 0 10px;
+
+        white-space: nowrap;
+
+        transform: translateY(-30px);
+    }
+
+
+    .hero-description {
+
+        width: 100%;
+
+        max-width: 320px;
+        font-size:
+            clamp(17px, 3.5vw, 13px);
+
+        font-family: "IRANSans", sans-serif;
+
+        line-height: 1.65;
+
+        margin: 3px auto 35px;
+
+        padding: 19px;
+
+        transform: translateY(-48px);
+    }
+
+
+    .hero-scroll {
+        bottom: -82px;
+
+        top: auto;
+    }
+
+    .hero-buttons {
+        transform: translateY(-80px);
+    }
+
+    /* دکمه‌ها */
+    .hero-mobile-content .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-mobile-content .hero-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+}
+
+
+/* =========================================================
+   HERO BUTTONS RESPONSIVE
+   ========================================================= */
+@media (max-width: 639px) {
+
+    .hero-mobile-content .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin: 0;
+        padding-inline: 0;
+    }
+
+    .hero-mobile-content .hero-btn {
+        width: 100%;
+        min-width: 0;
+        flex-shrink: 1;
+    }
+}
+
+
+/* =========================================================
+   640px+
+   سه کادر کنار هم
+   همیشه از سمت راست شروع می‌شوند
+   ========================================================= */
+
+@media (min-width: 640px) {
+
+    .hero-mobile-content .hero-buttons {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: flex-start !important;
+
+        gap: 12px;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        direction: rtl;
+
+        transform: none !important;
+    }
+
+
+    .hero-mobile-content .hero-btn {
+
+        flex: 0 1 auto;
+
+        width: auto;
+
+        min-width: 0;
+
+        max-width: 230px;
+
+        flex-shrink: 1;
+    }
+
+
+    /* ترتیب از راست به چپ */
+
+    .hero-mobile-content .catalog-btn {
+        order: 1;
+    }
+
+    .hero-mobile-content .teaser-btn {
+        order: 2;
+    }
+
+    .hero-mobile-content .telegram-btn {
+        order: 3;
+    }
+}
+
+
+
+
+
+/* =========================================================
+   SMALL HEIGHT SCREENS
+   جلوگیری از برخورد محتوا با پایین صفحه
+   ========================================================= */
+
+@media (max-height: 700px) and (max-width: 992px) {
+
+    .hero-content {
+        padding-top: 55px;
+    }
+
+
+    .hero-logo {
+        width:
+            clamp(75px, 14vw, 130px);
+
+        margin-bottom: 8px;
+    }
+
+
+    .hero-title {
+        margin-bottom: 6px;
+    }
+
+
+    .hero-description {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero,
+    .hero-content,
+    .hero-ring,
+    .hero-brand-dots span.active,
+    .scroll-btn {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   HERO THEME SYSTEM
+   ========================================================= */
+
+/* -------------------------
+   DAY MODE
+   ------------------------- */
+
+.hero-light {
+    --hero-bg: #faf7f2;
+    --hero-text: #ffffff;
+    --hero-description: rgba(250, 247, 242, 0.95);
+    --hero-purple: #9e6fbc;
+    --hero-overlay: rgba(80, 4, 104, 0.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   NIGHT - TITLE
+   ========================================================= */
+
+.hero-dark .hero-title,
+.hero-dark .hero-title-nastaliq {
+    color: #ffffff;
+}
+
+
+/* عنوان بنفش */
+.hero-dark .hero-title-purple {
+    color: #b895ce;
+}
+
+
+
+
+
+/* =========================================================
+   NIGHT - BRAND PANEL
+   ========================================================= */
+
+.hero-dark .hero-brand-glow {
+    background:
+        linear-gradient(
+            135deg,
+            #6a3b97,
+            #9e6fbc,
+            #b895ce
+        );
+
+    opacity: .26;
+    filter: blur(18px);
+}
+
+
+/* =========================================================
+   DARK MODE — HERO BRAND PANEL
+   فقط رنگ پس‌زمینه + حالت شیشه‌ای
+   ========================================================= */
+
+.hero-dark .hero-brand-panel {
+    background: rgba(15, 8, 24, 0.40);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   NIGHT - BRAND TEXT
+   ========================================================= */
+
+.hero-dark .hero-brand-panel h3 {
+    color: #b895ce;
+}
+
+
+.hero-dark .hero-brand-panel p {
+    color: rgba(250, 247, 242, .72);
+}
+
+/* =========================================================
+   HERO BRAND LOGO — DARK MODE
+   ========================================================= */
+
+.hero-dark .hero-brand-logo {
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(58%)
+        sepia(18%)
+        saturate(900%)
+        hue-rotate(235deg)
+        brightness(88%)
+        contrast(95%)
+        drop-shadow(0 0 8px rgba(184, 149, 206, 0.55))
+        drop-shadow(0 0 20px rgba(158, 111, 188, 0.35));
+}
+
+
+/* =========================================================
+   NIGHT - RINGS
+   ========================================================= */
+
+.hero-dark .hero-ring-outer {
+    border-color: rgba(158, 111, 188, .24);
+}
+
+
+.hero-dark .hero-ring-inner {
+    border-color: rgba(184, 149, 206, .30);
+}
+
+
+/* =========================================================
+   NIGHT - DOTS
+   ========================================================= */
+
+.hero-dark .hero-brand-dots span {
+    background: rgba(106, 59, 151, .50);
+}
+
+
+.hero-dark .hero-brand-dots span.active {
+    background: #b895ce;
+}
+
+
+/* =========================================================
+   NIGHT - LOGO
+   ========================================================= */
+
+.hero-dark .hero-brand-logo,
+.hero-dark .hero-logo {
+    filter:
+        drop-shadow(
+            0 4px 8px rgba(0, 0, 0, .38)
+        )
+        drop-shadow(
+            0 0 18px rgba(158, 111, 188, .16)
+        );
+}
+
+
+
+/* =========================================================
+   SMOOTH THEME TRANSITION
+   ========================================================= */
+
+.hero,
+.hero-overlay,
+.hero-brand-panel,
+.hero-description,
+.hero-title,
+.hero-title-nastaliq,
+.hero-brand-panel h3,
+.hero-brand-panel p,
+.scroll-btn {
+    transition:
+        background-color .5s ease,
+        color .5s ease,
+        border-color .5s ease,
+        box-shadow .5s ease,
+        opacity .5s ease;
+}

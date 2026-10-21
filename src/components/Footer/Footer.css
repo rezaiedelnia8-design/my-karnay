@@ -1,0 +1,1037 @@
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+    background: var(--color-brand-ivory, #fdfdfd);
+    color: var(--color-stone-700, #44403c);
+    border-top: 1px solid #d2c8db;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.footer-container {
+    width: min(100% - 64px);
+
+    margin-inline: auto;
+
+    padding-block: 48px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.footer-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 32px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+
+.footer-logo-light {
+    height: 44px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.footer-logo-dark {
+    height: 44px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    display: none;
+}
+
+
+
+
+
+.footer-brand-text {
+    text-align: right;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.footer-brand-title {
+    display: block;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    color: var(
+        --color-brand-amethyst,
+        #6a3b97
+    );
+}
+
+
+.footer-brand-subtitle {
+    display: block;
+
+    margin-top: 2px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+
+    color: var(
+        --color-gray-500,
+        #6b7280
+    );
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+   ========================================================= */
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+.footer-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 40px;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(106, 59, 151, 0.12);
+
+    border-radius: 16px;
+
+    background: rgba(233, 222, 239, 0.30);
+
+    color: var(
+        --color-stone-700,
+        #44403c
+    );
+
+    text-decoration: none;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.footer-phone:hover {
+    border-color: rgba(106, 59, 151, 0.25);
+
+    background: rgba(233, 222, 239, 0.60);
+
+    color: var(
+        --color-brand-gold,
+        #b895ce
+    );
+
+
+}
+
+.footer-address:hover {
+
+    background: rgba(233, 222, 239, 0.60);
+
+    border-color: rgba(106, 59, 151, 0.25);
+
+}
+
+.footer-telegram-link:hover {
+
+        border-color: rgba(106, 59, 151, 0.25);
+
+    background: rgba(233, 222, 239, 0.60);
+
+    color: var(
+        --color-brand-gold,
+        #b895ce
+    );
+
+
+
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.footer-link-icon {
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    color: var(
+        --color-brand-amethyst,
+        #6a3b97
+    );
+
+    background: rgba(233, 222, 239, 0.45);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.footer-link:hover .footer-link-icon {
+    transform: scale(1.05);
+}
+
+
+.footer-link-icon svg {
+    width: 14px;
+
+    height: 14px;
+
+    stroke-width: 1.75;
+}
+
+
+/* =========================================================
+   TELEGRAM
+   ========================================================= */
+
+.footer-telegram {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.footer-telegram svg {
+    width: 12px;
+
+    height: 12px;
+
+    opacity: 0.6;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.footer-link:hover .footer-telegram svg {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    flex-direction: row;
+
+    gap: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(120, 113, 108, 0.10);
+
+    font-size: 12px;
+
+    font-family: "IRANSans", sans-serif;
+
+    direction: rtl;
+}
+
+
+.footer-credit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0;
+
+    text-align: right;
+
+    order: 1;
+}
+
+
+.footer-credit svg {
+    width: 16px;
+
+    height: 16px;
+
+    flex-shrink: 0;
+
+    color: var(
+        --color-brand-amethyst,
+        #6a3b97
+    );
+}
+
+
+.footer-copyright {
+    margin: 0;
+
+    text-align: left;
+
+    color: var(
+        --color-gray-500,
+        #6b7280
+    );
+
+    line-height: 1.8;
+
+    order: 2;
+}
+
+
+/* =========================================================
+   VERY SMALL
+   0px - 340px
+   سه کارت زیر هم
+   آدرس کشیده‌تر از تلفن و تلگرام
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+    .footer-container {
+        width: calc(100% - 24px);
+        padding-block: 32px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-link {
+        box-sizing: border-box;
+        width: 88%;
+        justify-content: center;
+        min-height: 40px;
+        font-size: 11px;
+    }
+
+    /* کارت آدرس کشیده‌تر */
+    .footer-link:nth-child(2) {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-credit,
+    .footer-copyright {
+        justify-content: center;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   341px - 364px
+   تلفن بالا
+   آدرس راست + تلگرام چپ
+   ========================================================= */
+
+@media (min-width: 341px) and (max-width: 364px) {
+
+    .footer-container {
+        width: calc(100% - 28px);
+        padding-block: 32px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "phone phone"
+            "address telegram";
+        gap: 10px;
+    }
+
+    /* تلفن - بالا و وسط */
+    .footer-link:nth-child(1) {
+        grid-area: phone;
+        width: 80%;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    /* آدرس - پایین سمت راست */
+    .footer-link:nth-child(2) {
+        grid-area: address;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* تلگرام - پایین سمت چپ */
+    .footer-link:nth-child(3) {
+        grid-area: telegram;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-credit,
+    .footer-copyright {
+        justify-content: center;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   365px - 488px
+   تلفن راست + آدرس چپ
+   تلگرام پایین و وسط
+   ========================================================= */
+
+@media (min-width: 365px) and (max-width: 488px) {
+
+    .footer-container {
+        width: calc(100% - 32px);
+        padding-block: 36px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "phone address"
+            "telegram telegram";
+        gap: 10px;
+    }
+
+    /* تلفن - راست */
+    .footer-link:nth-child(1) {
+        grid-area: phone;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* آدرس - چپ */
+    .footer-link:nth-child(2) {
+        grid-area: address;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* تلگرام - پایین و وسط */
+    .footer-link:nth-child(3) {
+        grid-area: telegram;
+        width: 55%;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .footer-credit,
+    .footer-copyright {
+        justify-content: center;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   489px - 767px
+   سه کارت در یک خط و وسط
+   ========================================================= */
+
+@media (min-width: 489px) and (max-width: 767px) {
+
+    .footer-container {
+        width: calc(100% - 40px);
+        padding-block: 38px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-link {
+        width: auto;
+        min-width: 0;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .footer-credit,
+    .footer-copyright {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   768px - 1023px
+   سه کارت در یک خط و وسط
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .footer-container {
+        width: calc(100% - 48px);
+        padding-block: 60px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .footer-link {
+        width: auto;
+        min-width: 0;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        text-align: initial;
+    }
+
+    .footer-credit {
+        order: 1;
+        text-align: right;
+        justify-content: flex-start;
+    }
+
+    .footer-copyright {
+        order: 2;
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px به بالا
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .footer-container {
+        width: min(100% - 64px, 1280px);
+        margin-inline: auto;
+        padding-block: 48px;
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        direction: rtl;
+    }
+
+    .footer-credit {
+        order: 1;
+        margin: 0;
+        text-align: right;
+        justify-content: flex-start;
+
+        /* مهم: transform قبلی را حذف کردیم */
+        transform: none;
+    }
+
+    .footer-copyright {
+        order: 2;
+        margin: 0;
+        text-align: left;
+
+        /* مهم: transform قبلی را حذف کردیم */
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL LOGO / TEXT
+   ========================================================= */
+
+@media (max-width: 379px) {
+
+    .footer-logo-light {
+        height: 45px;
+    }
+
+    .footer-logo-dark {
+
+        height: 45px;
+    }
+
+    .footer-brand-title {
+        font-size: 16px;
+    }
+
+    .footer-brand-subtitle {
+        font-size: 11px;
+    }
+
+    .footer-link {
+
+        font-size: 12px;
+
+
+
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer *,
+    .footer *::before,
+    .footer *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+
+/* =========================================================
+   FOOTER — DARK MODE / KARNAY STYLE
+   ========================================================= */
+
+body.dark-mode .footer {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #0a0610;
+
+    color: #d6cbdc;
+
+    border-top: 1px solid
+        rgba(158, 111, 188, 0.14);
+}
+
+
+/* =========================================================
+   DARK MODE — FOOTER SOFT AMBIENT GLOW
+   ========================================================= */
+
+body.dark-mode .footer::before {
+    content: "";
+
+    position: absolute;
+
+    left: 18%;
+    bottom: -90px;
+
+    width: 64%;
+    height: 190px;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(106, 59, 151, 0.16) 0%,
+            rgba(106, 59, 151, 0.09) 35%,
+            rgba(106, 59, 151, 0.035) 58%,
+            transparent 78%
+        );
+
+    filter: blur(45px);
+
+    opacity: 0.9;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+body.dark-mode .footer-container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+body.dark-mode .footer-brand-title {
+    color: #b895ce;
+}
+
+body.dark-mode .footer-brand-subtitle {
+    color: rgba(233, 222, 239, 0.45);
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+   ========================================================= */
+
+body.dark-mode .footer-link {
+    border:
+        1px solid
+        rgba(201, 159, 228, 0.12);
+
+    background:
+        rgba(14, 6, 26, 0.72);
+
+    color:
+        rgb(255, 255, 255);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   LINK HOVER
+   ========================================================= */
+
+body.dark-mode .footer-phone:hover,
+body.dark-mode .footer-address:hover,
+body.dark-mode .footer-telegram-link:hover {
+
+
+
+    border-color:
+        rgba(158, 111, 188, 0.32);
+
+
+        background:
+        rgba(14, 6, 26, 0.72);
+
+    color: #f4eff7;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.28),
+        0 0 24px rgba(106, 59, 151, 0.14);
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+body.dark-mode .footer-link-icon {
+    color: #b895ce;
+
+    background:
+        rgba(106, 59, 151, 0.16);
+
+    border:
+        1px solid
+        rgba(158, 111, 188, 0.14);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================================================
+   ICON HOVER
+   ========================================================= */
+
+body.dark-mode .footer-phone:hover .footer-link-icon,
+body.dark-mode .footer-address:hover .footer-link-icon,
+body.dark-mode .footer-telegram-link:hover .footer-link-icon {
+
+    transform: scale(1.05);
+
+    background:
+        rgba(106, 59, 151, 0.24);
+
+    color: #ddcce7;
+
+    box-shadow:
+        0 0 18px rgba(106, 59, 151, 0.16);
+}
+
+
+/* =========================================================
+   TELEGRAM
+   ========================================================= */
+
+body.dark-mode .footer-telegram {
+    color: #b895ce;
+}
+
+body.dark-mode .footer-telegram svg {
+    color: #b895ce;
+}
+
+body.dark-mode .footer-telegram-link:hover .footer-telegram {
+    color: #f4edf7;
+}
+
+body.dark-mode .footer-telegram-link:hover .footer-telegram svg {
+    color: #ddcce7;
+}
+
+
+/* =========================================================
+   BOTTOM DIVIDER
+   ========================================================= */
+
+body.dark-mode .footer-bottom {
+    border-top:
+        1px solid
+        rgba(158, 111, 188, 0.10);
+}
+
+
+/* =========================================================
+   CREDIT
+   ========================================================= */
+
+body.dark-mode .footer-credit {
+    color:
+        rgba(250, 247, 242, 0.863);
+}
+
+body.dark-mode .footer-credit svg {
+    color: #b895ce;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+body.dark-mode .footer-copyright {
+    color:
+        rgba(250, 247, 242, 0.42);
+}
+
+
+/* =========================================================
+   PHONE / LINKS
+   ========================================================= */
+
+body.dark-mode .footer-phone {
+    color:
+        rgba(250, 247, 242, 0.72);
+}
+
+body.dark-mode .footer-phone:hover {
+    color: #f4edf7;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body.dark-mode .footer *,
+    body.dark-mode .footer *::before,
+    body.dark-mode .footer *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+body.dark-mode .footer-logo-light {
+
+    display: none;
+
+}
+
+body.dark-mode .footer-logo-dark {
+
+    display: block;
+
+}

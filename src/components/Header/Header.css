@@ -1,0 +1,1036 @@
+/* ===========================
+   Header
+=========================== */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 84px;
+
+    /* قبل از اسکرول */
+    background: #ffffff;
+
+    /* کاملاً مات */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    border-bottom: 1px solid rgba(106, 59, 151, 0.08);
+
+    z-index: 1000;
+
+    transition:
+        background 0.3s ease,
+        backdrop-filter 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    overflow: visible;
+}
+
+.header.is-scrolled {
+    background: rgba(246, 240, 250, 0.72);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(106, 59, 151, 0.12);
+
+    box-shadow:
+        0 8px 30px rgba(106, 59, 151, 0.06);
+}
+
+
+
+
+
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0 0 auto 0;
+
+    height:5.5px;
+
+    background:linear-gradient(
+        90deg,
+        #6a3b97,
+        #8f6cbc,
+        #b895ce,
+        #8f6cbc,
+        #6a3b97
+
+    );
+
+
+
+
+    box-shadow:
+        0 0 8px rgba(158,111,188,.35),
+        0 0 18px rgba(158,111,188,.18);
+
+}
+
+
+
+/* ===========================
+   Main Container
+=========================== */
+
+
+.header .container{
+
+    height:100%;
+
+    display:grid;
+
+    grid-template-columns:auto 1fr auto;
+
+    grid-template-areas:
+
+    "left center right";
+
+    align-items:center;
+
+}
+
+
+
+
+/* ===========================
+   Logo Section
+=========================== */
+
+
+.header-right{
+
+    grid-area:right;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+
+
+.header-logo{
+
+    display:flex;
+
+    flex-direction: row-reverse;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+}
+
+
+
+.header-logo img{
+
+    width:clamp(67px,4vw,59px);
+
+    height:auto;
+
+    transition:var(--transition);
+
+
+
+}
+
+
+
+.header-logo:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.header-logo-light {
+
+    display: block;
+}
+
+.header-logo-dark {
+
+    display: none;
+}
+
+
+
+.logo-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1;
+
+}
+
+
+
+.logo-text h2{
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight: 700;
+
+    font-size:20px;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+
+    padding-top: 3px;
+
+    color: rgb(106,59,151);
+
+}
+
+
+
+.logo-text span{
+
+    margin-top:7px;
+
+    font-size:10px;
+
+    font-family: "IRANSans", sans-serif;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#767477;
+
+    text-align: end;
+
+}
+
+
+
+
+
+/* ===========================
+   Desktop Menu
+=========================== */
+
+
+.header-center{
+
+    grid-area:center;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px,3vw,40px);
+    direction: rtl;
+}
+
+
+
+.desktop-menu a{
+
+    position:relative;
+
+    font-size:15px;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight:500;
+
+    color:var(--text-light);
+
+    transition:var(--transition);
+
+}
+
+
+
+.desktop-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-10px;
+
+    left:50%;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transform:translateX(-50%);
+
+    transition:var(--transition);
+
+}
+
+
+.desktop-menu a:hover{
+
+    color:var(--primary);
+
+}
+
+
+.desktop-menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Left Actions
+=========================== */
+
+
+.header-left{
+
+    grid-area:left;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:clamp(6px,1vw,14px);
+
+    direction:rtl;
+
+
+
+}
+
+
+
+/* ===========================
+   Language
+=========================== */
+
+
+.language-btn{
+
+    height:30px;
+
+    padding-inline:12px;
+
+    margin-left: 4.5px;
+
+    border-radius:var(--radius-pill);
+
+    border:1px solid var(--border);
+
+    background:var(--background);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    color:var(--text-light);
+
+    padding-right: 11px;
+
+    padding-left: 11px;
+
+    color: rgb(140, 74, 202);
+
+    font-family: var(--font-sans);
+
+    transition:var(--transition);
+
+    background: #ebddf1;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+
+
+}
+
+
+
+.language-btn svg{
+
+    color: #6e5380;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   Moon Button
+=========================== */
+
+
+.circle-btn{
+
+    width:37px;
+
+    height:37px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background: #ebddf1;
+
+    color:#9009eb;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:16px;
+
+    transition:var(--transition);
+
+}
+
+.circle-btn:hover,
+.language-btn:hover{
+
+
+
+    border-color:#351746;
+
+}
+
+/* ===========================
+   Hamburger
+=========================== */
+
+
+.menu-btn{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius: 50%;
+
+    background:transparent;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size:28px;
+
+    color:var(--text);
+
+    transition: var(--transition);
+
+}
+
+.mobile-menu {
+    position: fixed;
+
+    top: 84px;
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 20px 24px 24px;
+
+    background: #f6f0fa;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    box-shadow: 0 12px 30px rgba(40, 15, 55, .12);
+
+    visibility: hidden;
+
+    transform: translateY(-100%);
+
+    transition:
+        transform .55s cubic-bezier(.22, 1, .36, 1),
+        visibility 0s linear .55s;
+
+    z-index: 999;
+}
+
+
+.mobile-menu.active {
+    visibility: visible;
+
+    transform: translateY(0);
+
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        visibility 0s linear 0s;
+}
+
+.menu-btn:hover{
+
+    background:#F4EDF9;
+
+    color:#0b0a0c;
+
+}
+
+
+.mobile-item{
+
+    direction: rtl;
+
+    height:41px;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    background:transparent;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding-inline:18px;
+
+    color:#494849;
+
+    font-family: "IRANSans", sans-serif;
+
+    font-size:14px;
+
+    font-weight: 500;
+
+    transition:var(--transition);
+
+}
+
+
+.mobile-item:hover{
+
+    background:#ecebec;
+
+    color:#64098f;
+
+}
+
+
+.mobile-dot{
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+   margin-left:-12px;
+
+    flex-shrink:0;
+
+}
+
+
+
+/* ===========================
+Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.header-center{
+
+display:none;
+
+
+}
+
+.menu-btn{
+
+display:flex;
+
+
+}
+
+
+
+}
+
+/* ===========================
+Mobile Language
+=========================== */
+
+@media(max-width:640px){
+
+.language-btn{
+
+width:40px;
+
+height:40px;
+
+padding:0;
+
+
+}
+
+.language-btn span{
+
+display:none;
+
+
+}
+
+.circle-btn,
+.menu-btn{
+
+width:40px;
+
+height:40px;
+
+
+}
+
+}
+
+/* ===========================
+Small Mobile
+=========================== */
+
+@media(max-width:350px){
+
+.header{
+
+height:76px;
+
+
+}
+
+.header .container{
+
+padding-inline:10px;
+
+
+}
+
+.header-logo img{
+
+width:36px;
+
+
+}
+
+.logo-text h2{
+
+font-size:14px;
+
+
+}
+
+.logo-text span{
+
+font-size: 8px;
+
+margin-left: 8px;
+
+}
+
+.language-btn,
+.circle-btn,
+.menu-btn{
+
+width:30px;
+
+height:30px;
+
+margin-right: -5px;
+
+
+}
+
+.menu-btn{
+
+font-size:22px;
+
+
+}
+
+.mobile-menu{
+
+top:76px;
+
+
+}
+
+}
+
+@media(max-width:311px){
+
+.header{
+
+height:76px;
+
+
+}
+
+.header .container{
+
+padding-inline:10px;
+
+
+}
+
+.header-logo img{
+
+width:36px;
+
+
+}
+
+.logo-text h2{
+
+font-size:16px;
+
+margin-right: 65px;
+
+transform: translatex(61px);
+
+
+}
+
+.logo-text span{
+
+font-size: 10px;
+
+margin-left: 8px;
+
+}
+
+.language-btn,
+.circle-btn,
+.menu-btn{
+
+width:30px;
+
+height:30px;
+
+margin-right: -5px;
+
+
+}
+
+.menu-btn{
+
+font-size:22px;
+
+
+}
+
+.mobile-menu{
+
+top:76px;
+
+
+}
+
+}
+
+#about-scroll,
+#trailer-section,
+#catalog-section,
+#contact-section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =====================================================
+   KARNAY DARK MODE
+   ===================================================== */
+
+body.dark-mode .header {
+    background: rgba(4, 3, 5, 0.8);
+
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(184, 149, 206, 0.10);
+
+    box-shadow:
+        0 1px rgba(184, 149, 206, 0.10),
+        0 4px 14px -2px rgba(158, 111, 188, 0.18),
+        0 10px 26px -4px rgba(106, 59, 151, 0.22);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =====================================================
+   TOP PURPLE LIGHT
+   ===================================================== */
+
+body.dark-mode .header::before {
+    background: linear-gradient(
+        90deg,
+        #6a3b97,
+        #8f6cbc,
+        #b895ce,
+        #8f6cbc,
+        #6a3b97
+    );
+
+    box-shadow:
+        0 0 8px rgba(170, 124, 199, 0.35),
+        0 0 18px rgba(158, 111, 188, 0.18);
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
+body.dark-mode .logo-text h2 {
+    color: #ab7cc9;
+}
+
+body.dark-mode .logo-text span {
+    color: #9e6fbc;
+}
+
+
+body.dark-mode .header-logo-light {
+
+    display: none;
+
+}
+
+body.dark-mode .header-logo-dark {
+
+    display: block;
+
+}
+
+/* =====================================================
+   DESKTOP MENU
+   ===================================================== */
+
+body.dark-mode .desktop-menu a {
+    color: #ffffff;
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+body.dark-mode .desktop-menu a:hover {
+    color: #b895ce;
+
+    text-shadow:
+        0 0 10px rgba(184, 149, 206, 0.35);
+}
+
+body.dark-mode .desktop-menu a::after {
+    background: #9e6fbc;
+
+    box-shadow:
+        0 0 8px rgba(158, 111, 188, 0.45);
+}
+
+
+/* =====================================================
+   LANGUAGE BUTTON
+   ===================================================== */
+
+body.dark-mode .language-btn {
+    background: rgba(114, 22, 172, 0.12);
+
+    color: #a354d1;
+
+    border-color:
+        rgba(158, 111, 188, 0.25);
+
+    box-shadow:
+        inset 0 0 10px rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .language-btn svg {
+    color: #a354d1;
+}
+
+body.dark-mode .language-btn:hover {
+    background: rgba(27, 21, 31, 0.2);
+
+    border-color: #9e6fbc;
+
+    color: #a354d1;
+
+
+}
+
+
+/* =====================================================
+   MOON / SUN BUTTON
+   ===================================================== */
+
+body.dark-mode .circle-btn {
+    background: rgba(114, 22, 172, 0.12);
+
+    color: #b895ce;
+
+    border-color:
+        rgba(158, 111, 188, 0.25);
+
+    box-shadow:
+        inset 0 0 10px rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .circle-btn:hover {
+    background: rgba(27, 21, 31, 0.2);
+
+    border-color: #b895ce;
+
+
+
+
+}
+
+
+/* =====================================================
+   HAMBURGER
+   ===================================================== */
+
+body.dark-mode .menu-btn {
+    color: #ffffff;
+}
+
+body.dark-mode .menu-btn:hover {
+    background: rgba(158, 111, 188, 0.12);
+
+    color: #b895ce;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+   ===================================================== */
+
+body.dark-mode .mobile-menu {
+    background: rgba(10, 6, 16, 0.96);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45),
+        0 8px 24px rgba(106, 59, 151, 0.18);
+
+    border-top:
+        1px solid rgba(158, 111, 188, 0.12);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+body.dark-mode .mobile-item {
+    color: #ffffff;
+}
+
+body.dark-mode .mobile-item:hover {
+    background: rgba(158, 111, 188, 0.12);
+
+    color: #b895ce;
+}
+
+body.dark-mode .mobile-dot {
+    background: #9e6fbc;
+
+    box-shadow:
+        0 0 8px rgba(158, 111, 188, 0.55);
+}
+
+
+/* =====================================================
+   DARK MODE - BOTTOM PURPLE GLOW AFTER HERO
+   ===================================================== */
+
+body.dark-mode .header.header-after-hero {
+    position: relative;
+}
+
+/* خط پایین + هاله نور */
+body.dark-mode .header.header-after-hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 1px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 5px rgba(184, 149, 206, 0.75),
+        0 0 12px rgba(158, 111, 188, 0.65),
+        0 0 25px rgba(158, 111, 188, 0.45),
+        0 0 45px rgba(106, 59, 151, 0.30);
+
+    pointer-events: none;
+
+    opacity: 1;
+
+    transition:
+        opacity 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+/* وقتی هنوز روی Hero هستیم، نور وجود نداشته باشد */
+body.dark-mode .header:not(.header-after-hero)::after {
+    opacity: 0;
+}

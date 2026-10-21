@@ -1,0 +1,246 @@
+.scroll-to-top {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    border: 1px solid rgba(106, 59, 151, 0.30);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: #6A3B97;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(40px) saturate(150%);
+    -webkit-backdrop-filter: blur(40px) saturate(150%);
+
+    box-shadow:
+        0 4px 16px rgba(106, 59, 151, 0.20);
+
+    outline: none;
+
+    display: flex;
+
+    animation: scrollTopFloat 6s ease-in-out infinite;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 2.25;
+}
+
+
+.scroll-to-top:hover {
+    background: rgba(255, 255, 255, 0.28);
+
+    border-color: rgba(106, 59, 151, 0.45);
+
+    color: #0f0818;
+
+    box-shadow:
+        0 6px 24px rgba(106, 59, 151, 0.28);
+
+    transform: translateY(-3px);
+}
+
+
+@keyframes scrollTopFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(0.3deg);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL TO TOP — DARK MODE
+   ========================================================= */
+
+body.dark-mode .scroll-to-top {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    border: 1px solid rgba(106, 59, 151, 0.30);
+
+    border-radius: 50%;
+
+    /* شیشه‌ای و تیره */
+    background: rgba(20, 11, 32, 0.32);
+
+    /* رنگ فلش */
+    color: #ddcce7;
+
+    cursor: pointer;
+
+    /* Glass / Blur */
+    backdrop-filter: blur(40px) saturate(150%);
+    -webkit-backdrop-filter: blur(40px) saturate(150%);
+
+    /* هاله‌ی بنفش ملایم */
+    box-shadow:
+        0 4px 16px rgba(158, 111, 188, 0.28),
+        0 0 24px rgba(106, 59, 151, 0.16);
+
+    outline: none;
+
+    animation:
+        scrollTopFloat 8s ease-in-out infinite;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   ARROW — DARK MODE
+   ========================================================= */
+
+body.dark-mode .scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 2.25;
+}
+
+
+/* =========================================================
+   HOVER — DARK MODE
+   ========================================================= */
+
+body.dark-mode .scroll-to-top:hover {
+
+    /* روشن‌تر شدن شیشه */
+    background:
+        rgba(255, 255, 255, 0.20);
+
+    /* حاشیه‌ی بنفش روشن‌تر */
+    border-color:
+        rgba(158, 111, 188, 0.52);
+
+    /* فلش تیره‌تر روی زمینه‌ی روشن */
+    color:
+        #0f0818;
+
+    /* هاله‌ی قوی‌تر در Hover */
+    box-shadow:
+        0 6px 24px rgba(106, 59, 151, 0.38),
+        0 0 34px rgba(158, 111, 188, 0.22);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   ACTIVE — DARK MODE
+   ========================================================= */
+
+body.dark-mode .scroll-to-top:active {
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+        0 4px 14px rgba(106, 59, 151, 0.30),
+        0 0 22px rgba(158, 111, 188, 0.16);
+}
+
+
+/* =========================================================
+   FLOAT ANIMATION — DARK MODE
+   ========================================================= */
+
+@keyframes scrollTopFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(0.3deg);
+    }
+}
+
+
+/* =========================================================
+   MOBILE — DARK MODE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    body.dark-mode .scroll-to-top {
+
+        right: 18px;
+        bottom: 18px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    body.dark-mode .scroll-to-top svg {
+
+        width: 17px;
+        height: 17px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body.dark-mode .scroll-to-top {
+
+        animation: none !important;
+        transition: none !important;
+    }
+}

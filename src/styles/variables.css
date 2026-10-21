@@ -1,0 +1,127 @@
+:root{
+
+
+/* ======================
+   Colors
+====================== */
+
+
+--primary:#a39aac;
+
+--primary-light:#9E6FBC;
+
+--primary-soft:#e0e0e0;
+
+
+--background:#FFFFFF;
+
+--surface:#FAF7FC;
+
+
+--text:#222222;
+
+--text-light:#5f5563;
+
+--border:#ECE8F2;
+
+
+
+/* ======================
+   Brand Colors
+====================== */
+
+
+--plum:#0F0818;
+
+--lavender:#E9DEEF;
+
+--gold:#B895CE;
+
+
+
+/* ======================
+   Fonts
+====================== */
+
+
+--font-sans:"IRANSans",sans-serif;
+
+--font-display:"IRANSans",sans-serif;
+
+
+
+
+
+/* ======================
+   Container
+====================== */
+
+
+--container-width:1280px;
+
+
+
+/* ======================
+   Spacing
+====================== */
+
+
+--space-1:4px;
+
+--space-2:8px;
+
+--space-3:12px;
+
+--space-4:16px;
+
+--space-5:24px;
+
+--space-6:32px;
+
+--space-7:48px;
+
+--space-8:64px;
+
+
+
+/* ======================
+   Radius
+====================== */
+
+
+--radius-sm:8px;
+
+--radius-md:14px;
+
+--radius-lg:20px;
+
+--radius-xl:28px;
+
+--radius-pill:999px;
+
+
+
+/* ======================
+   Shadows
+====================== */
+
+
+--shadow-sm:
+0 4px 20px rgba(20,10,40,.04);
+
+
+--shadow-md:
+0 10px 40px rgba(20,10,40,.08);
+
+
+
+/* ======================
+   Transition
+====================== */
+
+
+--transition:
+.35s ease;
+
+
+}
